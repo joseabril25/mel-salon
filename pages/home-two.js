@@ -3,7 +3,6 @@ import { Preloader, Placeholder } from 'react-preloading-screen'
 import NoSSR from 'react-no-ssr'
 import Header from '../components/Layouts/Header'
 import MainBanner from '../components/home-two/MainBanner'
-import ServicesArea from '../components/home-one/ServicesArea'
 import Team from '../components/home-one/Team'
 import Funfacts from '../components/home-one/Funfacts'
 import RecentWork from '../components/home-one/RecentWork'
@@ -13,6 +12,7 @@ import Partner from '../components/home-one/Partner'
 import Blog from '../components/home-one/Blog'
 import Footer from '../components/Layouts/Footer'
 import GoTop from '../components/Layouts/GoTop'
+import Game from '../components/game'
 
 export default () => (
     <NoSSR>
@@ -24,7 +24,7 @@ export default () => (
             </Placeholder>
             <Header />
             <MainBanner />
-            <ServicesArea />
+            <Game />
             <Team />
             <Funfacts />
             <RecentWork />
