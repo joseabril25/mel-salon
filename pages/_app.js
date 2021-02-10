@@ -8,7 +8,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import 'react-accessible-accordion/dist/fancy-example.css';
 import '../node_modules/react-modal-video/css/modal-video.min.css'
 import 'react-image-lightbox/style.css';
-import '../static/styles/style.css'
+import '../static/styles/style.scss'
 // If you want to change the theme color you should comment out above line and uncomment the below line and change the color names from list
 /*
 * brink-pink-style.css

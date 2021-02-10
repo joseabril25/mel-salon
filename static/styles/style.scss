@@ -49,9 +49,9 @@ This files table contents are outlined below>>>>>
 /*================================================
 Default CSS
 =================================================*/
-@import url('https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
 
-$font-family: 'Poppins', sans-serif;
+$font-family: 'Varela Round', sans-serif;
 $light-green-color: #44ce6f;
 $white-color: #ffffff;
 $black-color: #0e314c;
@@ -64,6 +64,7 @@ $bg-color4: #0f054b;
 $hosting-main-color: #032b8d;
 $gradient-color: linear-gradient(135deg, #23bdb8 0%, #43e794 100%);
 $gradient-color2: linear-gradient(to right bottom, #1fa2ff, #00c0ff, #00d9f2, #53eedd, #a6ffcb);
+$orange-gradient: linear-gradient(175deg, rgba(255,190,0,1) 0%, rgba(252,147,0,1) 100%); 
 $transition: .5s;
 $font-size: 14px;
 
@@ -156,12 +157,12 @@ p {
 /*btn btn-primary*/
 .btn-primary {
     color: $white-color;
-    background-color: $light-green-color;
+    background-image: $orange-gradient;
     box-shadow: 0 13px 27px 0 rgba(68, 206, 111, 0.25);
 
     &:hover, &:focus, &:active {
         color: $white-color;
-        background: $black-color;
+        background: $orange-gradient;
         transform: translateY(-5px);
         box-shadow: 0 13px 27px 0 rgba(198, 121, 227, 0.25);
     }
@@ -173,7 +174,7 @@ p {
     }
     &:not(:disabled):not(.disabled).active, &:not(:disabled):not(.disabled):active, & .show > &.dropdown-toggle {
         color: $white-color;
-        background: $black-color;
+        background: $orange-gradient;
         transform: translateY(-5px);
         box-shadow: 0 13px 27px 0 rgba(198, 121, 227, 0.25);
     }
@@ -184,7 +185,7 @@ p {
         opacity: 1;
     }
     &.disabled:hover, &.disabled:focus, &:disabled:hover, &:disabled:focus {
-        background: $black-color;
+        background: $orange-gradient;
         box-shadow: 0 13px 27px 0 rgba(198, 121, 227, 0.25);
     }
 }
@@ -204,6 +205,7 @@ p {
     z-index: 1;
     text-transform: uppercase;
     transition: $transition;
+    background-color: $orange-gradient;
     font: {
         weight: 600;
         size: 14px;
@@ -215,7 +217,7 @@ p {
         height: 100%;
         width: 0;
         transition: $transition;
-        background: $purple-color;
+        background: $orange-gradient;
         z-index: -1;
     }
     &::after {
@@ -251,11 +253,11 @@ p {
         };
         &::before {
             border-radius: 0;
-            background: $purple-color;
+            background: $orange-gradient;
         }
         &::after {
             border-radius: 0;
-            background: $purple-color;
+            background: $orange-gradient;
         }
         &:not(:disabled):not(.disabled).active, &:not(:disabled):not(.disabled):active, .show>&.dropdown-toggle {
             color: $white-color;
@@ -423,11 +425,12 @@ Navbar CSS
     }
 }
 .startp-nav {
-    background: transparent;
+    background: rgb(0,186,162);
+    background: linear-gradient(10deg, rgba(0,186,162,1) 0%, rgba(0,168,162,1) 100%); 
     position: absolute;
     top: 0;
     left: 0;
-    padding-top: 15px;
+    padding: 15px;
     width: 100%;
     z-index: 999;
     height: auto;
@@ -455,7 +458,7 @@ Navbar CSS
                         weight: 500;
                         size: 15px;
                     };
-                    color: #4a6f8a;
+                    color: #fff;
                     padding: {
                         left: 0;
                         right: 0;
@@ -6429,12 +6432,6 @@ ML Main Banner CSS
         top: 130px;
         bottom: 140px;
     };
-    background: {
-        image: url(../images/banner-bg.jpg);
-        position: bottom right;
-        size: cover;
-        repeat: no-repeat;
-    };
     .container-fluid {
         padding: {
             left: 70px;
@@ -6554,6 +6551,9 @@ ML Main Banner CSS
 ML Partner CSS
 =================================================*/
 .ml-partner-area {
+    background: url('../images/hero/header-image2.png') no-repeat center;
+    background-size: cover;
+    height: 200px;
     &.mt-minus-top {
         margin-top: -80px;
     }

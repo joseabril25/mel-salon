@@ -1,7 +1,6 @@
 import React from 'react'
 import { Preloader, Placeholder } from 'react-preloading-screen'
 import NoSSR from 'react-no-ssr'
-import HeaderTwo from '../components/Layouts/HeaderTwo'
 import Partner from '../components/home-seven/Partner'
 import AboutArea from '../components/home-seven/AboutArea'
 import Services from '../components/home-seven/Services'
@@ -16,6 +15,7 @@ import GoTop from '../components/Layouts/GoTop'
 import Hero from '../components/hero'
 import About from '../components/about'
 import Game from '../components/game'
+import Header from '../components/header/Header'
 
 export default () => (
     <NoSSR>
@@ -25,7 +25,7 @@ export default () => (
                     <div className="spinner"></div>
                 </div>
             </Placeholder>
-            <HeaderTwo />
+            <Header />
             <Hero />
             <Partner />
             <About />
