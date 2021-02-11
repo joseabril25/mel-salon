@@ -6,8 +6,8 @@ const Game = () => {
         <section className="features-area ptb-80 bg-f7fafd">
             <div className="container">
                 <div className="section-title">
-                    <h2>WIN EXCITING PRICES! TRY OUT OUR LATEST PRODUCTS!</h2>
-                    <h3>GET FREEBIES & GIVEAWAYS THAT WILL MAKE YOU GO YEHEY!</h3>
+                    <h1>Win Exciting Prices! Try Out Our Latest Products! </h1>
+                    <h1>Get Freebies & Giveaways That Will Make You Go Yehey!  </h1>
                 </div>
 
                 <div className="row">

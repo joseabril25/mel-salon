@@ -1,122 +1,32 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Link from 'next/link';
 import * as Icon from 'react-feather';
+import boxContent from './box-content';
 
 const About = () => {
     return (
-        <section className="solutions-area ptb-80">
-            <div className="container">
+        <section className="solutions-area">
+            <div>
                 <div className="section-title">
-                    <span className="sub-title">What We Offer</span>
-                    <h2>Yehey! values the organic, unfiltered opinion of our consumers towards our products. In our online sampling community, what you think, matters!  </h2>
-                    <h2>If our product makes you go Yehey! </h2>
-                    <h2>It makes us go Hurray! </h2>
+                    <h1>Yehey! values the organic, unfiltered opinion of our consumers towards our products. </h1>
+                    <h1>In our online sampling community, what you think, matters!  </h1>
+                    <h1>If our product makes you go Yehey! </h1>
+                    <h1>It makes us go Hurray! </h1>
                 </div>
 
-                <div className="row">
-                    <div className="col-lg-3 col-sm-6 col-md-6">
-                        <div className="single-solutions-box">
-                            <div className="icon">
-                                <img src={require("../../static/images/icon4.png")} alt="image" />
+                <div className="row solutions-box-area">
+                    {
+                        boxContent.map(box =>
+                            <div className={`col-lg-3 col-sm-6 col-md-6 solutions-boxes`}>
+                                <div className={`single-solutions-box-${box.id}`}>
+                                    <Link href="#">
+                                        <a className="btn btn-secondary solutions-button">{box.buttonText}</a>
+                                    </Link>
+                                </div>
                             </div>
-                            <h3>
-                                <Link href="#">
-                                    <a>Robotic Automation</a>
-                                </Link>
-                            </h3>
-                            <p>Lorem ipsum dolor sit amet elit, adipiscing, sed do eiusmod tempor incididunt ut labore dolore magna aliqua.</p>
-
-                            <Link href="#">
-                                <a className="learn-more-btn">
-                                    <Icon.PlusCircle /> Learn More
-                                </a>
-                            </Link>
-                        </div>
-                    </div>
-
-                    <div className="col-lg-3 col-sm-6 col-md-6">
-                        <div className="single-solutions-box">
-                            <div className="icon">
-                                <img src={require("../../static/images/icon5.png")} alt="image" />
-                            </div>
-                            <h3>
-                                <Link href="#">
-                                    <a>Cognitive Automation</a>
-                                </Link>
-                            </h3>
-                            <p>Lorem ipsum dolor sit amet elit, adipiscing, sed do eiusmod tempor incididunt ut labore dolore magna aliqua.</p>
-                            
-                            <Link href="#">
-                                <a className="learn-more-btn">
-                                <Icon.PlusCircle /> Learn More
-                                </a>
-                            </Link>
-                        </div>
-                    </div>
-
-                    <div className="col-lg-3 col-sm-6 col-md-6">
-                        <div className="single-solutions-box">
-                            <div className="icon">
-                                <img src={require("../../static/images/icon6.png")} alt="image" />
-                            </div>
-                            <h3>
-                                <Link href="#">
-                                    <a>Cognitive Engagement</a>
-                                </Link>
-                            </h3>
-                            <p>Lorem ipsum dolor sit amet elit, adipiscing, sed do eiusmod tempor incididunt ut labore dolore magna aliqua.</p>
-                            
-                            <Link href="#">
-                                <a className="learn-more-btn">
-                                <Icon.PlusCircle /> Learn More
-                                </a>
-                            </Link>
-                        </div>
-                    </div>
-
-                    <div className="col-lg-3 col-sm-6 col-md-6">
-                        <div className="single-solutions-box">
-                            <div className="icon">
-                                <img src={require("../../static/images/icon7.png")} alt="image" />
-                            </div>
-                            <h3>
-                                <Link href="#">
-                                    <a>Security & Surveillance</a>
-                                </Link>
-                            </h3>
-                            <p>Lorem ipsum dolor sit amet elit, adipiscing, sed do eiusmod tempor incididunt ut labore dolore magna aliqua.</p>
-                            
-                            <Link href="#">
-                                <a className="learn-more-btn">
-                                    <i data-feather="plus-circle"></i> Learn More
-                                </a>
-                            </Link>
-                        </div>
-                    </div>
+                        )
+                    }
                 </div>
-            </div>
-
-            {/* Shape Images */}
-            <div className="shape1">
-                <img src={require("../../static/images/shape1.png")} alt="shape" />
-            </div>
-            <div className="shape2 rotateme">
-                <img src={require("../../static/images/shape2.svg")} alt="shape" />
-            </div>
-            <div className="shape3">
-                <img src={require("../../static/images/shape3.svg")} alt="shape" />
-            </div>
-            <div className="shape4">
-                <img src={require("../../static/images/shape4.svg")} alt="shape" />
-            </div>
-            <div className="shape6 rotateme">
-                <img src={require("../../static/images/shape4.svg")} alt="shape" />
-            </div>
-            <div className="shape7">
-                <img src={require("../../static/images/shape4.svg")} alt="shape" />
-            </div>
-            <div className="shape8 rotateme">
-                <img src={require("../../static/images/shape2.svg")} alt="shape" />
             </div>
         </section>
     );

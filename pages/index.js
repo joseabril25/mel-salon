@@ -1,7 +1,6 @@
 import React from 'react'
 import { Preloader, Placeholder } from 'react-preloading-screen'
 import NoSSR from 'react-no-ssr'
-import Partner from '../components/home-seven/Partner'
 import AboutArea from '../components/home-seven/AboutArea'
 import Services from '../components/home-seven/Services'
 import Funfacts from '../components/home-seven/Funfacts'
@@ -25,10 +24,13 @@ export default () => (
                     <div className="spinner"></div>
                 </div>
             </Placeholder>
+            {/* Menu */}
             <Header />
+            {/* Big Hero */}
             <Hero />
-            <Partner />
+            {/* 2nd Section */}
             <About />
+            {/* 3rd Section */}
             <Game />
             <AboutArea />
             <Services />

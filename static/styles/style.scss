@@ -50,12 +50,16 @@ This files table contents are outlined below>>>>>
 Default CSS
 =================================================*/
 @import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+@font-face {
+    font-family: 'Arial-Rounded';
+    src:url('../fonts/arial/arial-rounded.ttf')
+}
 
-$font-family: 'Varela Round', sans-serif;
-$light-green-color: #44ce6f;
+$font-family: 'Arial-Rounded', sans-serif;
+$light-blue-color: #276f8f;
 $white-color: #ffffff;
-$black-color: #0e314c;
-$paragraph-color: #6084a4;
+$heading-color: #276f8f;
+$paragraph-color: #276f8f;
 $purple-color: #c679e3;
 $bg-color: #f7fafd;
 $bg-color2: #f9f6f6;
@@ -79,14 +83,14 @@ img {
     height: auto;
 }
 a {
-    color: $black-color;
+    color: $heading-color;
     display: inline-block;
     transition: $transition;
     text-decoration: none;
     outline: 0 !important;
 
     &:hover, &:focus {
-        color: $light-green-color;
+        color: $light-blue-color;
         text-decoration: none;
     }
 }
@@ -107,7 +111,7 @@ p {
     }
 }
 .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
-    color: $black-color;
+    color: $heading-color;
     font-weight: 500;
 }
 .ptb-80 {
@@ -148,7 +152,7 @@ p {
             }
             &:hover, &.active {
                 span {
-                    background: $light-green-color !important;
+                    background: $light-blue-color !important;
                 }
             }
         }
@@ -180,7 +184,7 @@ p {
     }
     &.disabled, &:disabled {
         color: $white-color;
-        background-color: $light-green-color;
+        background-color: $light-blue-color;
         box-shadow: 0 13px 27px 0 rgba(68, 206, 111, 0.25);
         opacity: 1;
     }
@@ -199,16 +203,17 @@ p {
 }
 .btn {
     border: none;
-    padding: 15px 40px;
+    padding: 10px 30px;
     position: relative;
-    border-radius: 4px;
+    border-radius: 10px;
     z-index: 1;
     text-transform: uppercase;
     transition: $transition;
     background-color: $orange-gradient;
     font: {
         weight: 600;
-        size: 14px;
+        size: 25px;
+        letter-spacing: 5px;
     };
     &::after, &::before {
         content: '';
@@ -235,21 +240,34 @@ p {
     }
 }
 
+.hero-button {
+    top: -80px;
+    max-width: 40%;
+}
+
+.solutions-button {
+    width: 100%;
+    max-width: 80%;
+    margin-top: 50%;
+    padding: 10px 10px !important;
+}
+
 /*btn-secondary*/
 .btn {
     &.btn-secondary {
         text-transform: capitalize;
-        border-radius: 0;
-        background-color: $light-green-color;
-        padding: 13px 30px;
-        box-shadow: 5px 5px 5px #a6f5be;
+        border-radius: 10px;
+        background-color: $light-blue-color;
+        padding: 10px 30px;
+
         margin: {
             right: 5px;
             bottom: 5px;
         };
         font: {
-            size: 14px;
-            weight: 500;
+            weight: 600;
+            size: 16px;
+            letter-spacing: 5px;
         };
         &::before {
             border-radius: 0;
@@ -261,8 +279,8 @@ p {
         }
         &:not(:disabled):not(.disabled).active, &:not(:disabled):not(.disabled):active, .show>&.dropdown-toggle {
             color: $white-color;
-            background-color: $light-green-color;
-            border-color: $light-green-color;
+            background-color: $light-blue-color;
+            border-color: $light-blue-color;
         }
         &:not(:disabled):not(.disabled).active:focus, &:not(:disabled):not(.disabled):active:focus, .show>&.dropdown-toggle:focus {
             box-shadow: 5px 5px 5px #e9caf5;
@@ -282,7 +300,7 @@ p {
 }
 label {
     margin-bottom: 10px;
-    color: $black-color;
+    color: $heading-color;
     font: {
         size: 15px;
         weight: 500;
@@ -292,7 +310,7 @@ label {
     height: 50px;
     padding: 10px 20px;
     font-size: 14px;
-    color: $black-color;
+    color: $heading-color;
     border: 1px solid #eeeeee;
     border-radius: 0;
     background: #eeeeee;
@@ -302,7 +320,7 @@ label {
         outline: 0;
         background: $white-color;
         box-shadow: unset;
-        border-color: $light-green-color;
+        border-color: $light-blue-color;
     }
 }
 /*Section Title*/
@@ -338,7 +356,7 @@ label {
             height: 10px;
             width: 10px;
             border-radius: 50%;
-            background: $light-green-color;
+            background: $light-blue-color;
             animation: {
                 duration: 3s;
                 timing-function: linear;
@@ -376,7 +394,7 @@ Preloader CSS
     width: 100%;
     height: 100%;
     z-index: 9999999;
-    background: $light-green-color;
+    background: $light-blue-color;
 
     .spinner {
         width: 60px;
@@ -470,7 +488,7 @@ Navbar CSS
                         right: 14px;
                     };
                     &:hover, &:focus, &.active {
-                        color: $light-green-color;
+                        color: $light-blue-color;
                     }
                     svg {
                         width: 14px;
@@ -522,7 +540,7 @@ Navbar CSS
                                 weight: 500;
                             };
                             &:hover, &:focus, &.active {
-                                color: $light-green-color;
+                                color: $light-blue-color;
                             }
                         }
                         .dropdown_menu {
@@ -537,7 +555,7 @@ Navbar CSS
                                     color: #4a6f8a;
 
                                     &:hover, &:focus, &.active {
-                                        color: $light-green-color;
+                                        color: $light-blue-color;
                                     }
                                 }
                             }
@@ -549,7 +567,7 @@ Navbar CSS
                                 top: -20px !important;
                             }
                             a {
-                                color: $light-green-color;
+                                color: $light-blue-color;
                             }
                         }
                     }
@@ -575,15 +593,15 @@ Navbar CSS
 
                     &:hover, &:focus {
                         color: $white-color;
-                        border-color: $light-green-color;
+                        border-color: $light-blue-color;
                     }
                     &:focus {
-                        background-color: $light-green-color;
+                        background-color: $light-blue-color;
                         color: $white-color;
-                        border-color: $light-green-color;
+                        border-color: $light-blue-color;
                     }
                     &::after, &::before {
-                        background: $light-green-color;
+                        background: $light-blue-color;
                     }
                 }
                 &.btn-primary {
@@ -591,7 +609,7 @@ Navbar CSS
                     box-shadow: 0 13px 27px 0 rgba(198, 121, 227, 0.25);
 
                     &::after, &::before {
-                        background: $light-green-color;
+                        background: $light-blue-color;
                         box-shadow: 0 13px 27px 0 rgba(68, 206, 111, 0.25);
                     }
                 }
@@ -617,6 +635,9 @@ Navbar CSS
     }
 }
 
+.header-head {
+    height: 100vh;
+}
 /*================================================
 Main Banner CSS
 =================================================*/
@@ -778,7 +799,7 @@ Main Banner CSS
                     transform: translateY(-50%);
                     width: 20px;
                     height: 2px;
-                    background: $light-green-color;
+                    background: $light-blue-color;
                     content: '';
                 }
                 &:last-child {
@@ -1117,7 +1138,7 @@ Boxes CSS
         line-height: 55px;
         background: #cdf1d8;
         border-radius: 50%;
-        color: $light-green-color;
+        color: $light-blue-color;
         -webkit-transition: $transition;
         transition: $transition;
     }
@@ -1182,7 +1203,7 @@ Boxes CSS
         }
         .icon {
             background: $white-color;
-            color: $light-green-color;
+            color: $light-blue-color;
         }
         h3, p {
             color: $white-color;
@@ -1319,7 +1340,7 @@ Why Choose US CSS
     margin-top: 30px;
 
     .icon {
-        color: $light-green-color;
+        color: $light-blue-color;
         -webkit-transition: $transition;
         transition: $transition;
 
@@ -1441,7 +1462,7 @@ Services CSS
         svg {
             margin-right: 5px;
             display: inline-block;
-            color: $light-green-color;
+            color: $light-blue-color;
             -webkit-transition: $transition;
             transition: $transition;
             width: 18px;
@@ -1663,7 +1684,7 @@ Services CSS
         line-height: 55px;
         background: #cdf1d8;
         border-radius: 50%;
-        color: $light-green-color;
+        color: $light-blue-color;
         -webkit-transition: $transition;
         transition: $transition;
 
@@ -1681,7 +1702,7 @@ Services CSS
         position: absolute;
         width: 0;
         height: 4px;
-        background: $light-green-color;
+        background: $light-blue-color;
         opacity: 0;
         visibility: hidden;
         bottom: 0;
@@ -1701,7 +1722,7 @@ Services CSS
         box-shadow: 0 2px 48px 0 rgba(0, 0, 0, 0.08);
 
         .icon {
-            background: $light-green-color;
+            background: $light-blue-color;
             color: $white-color;
 
             &.bg-c679e3 {
@@ -1751,7 +1772,7 @@ Services Details CSS
                 display: block;
                 padding: 12px 20px 12px 51px;
                 text-decoration: none;
-                color: $black-color;
+                color: $heading-color;
                 position: relative;
                 border-bottom: 1px solid $white-color;
                 font: {
@@ -1765,7 +1786,7 @@ Services Details CSS
                     width: 40px;
                     text-align: center;
                     height: 100%;
-                    background: $light-green-color;
+                    background: $light-blue-color;
                     color: $white-color;
 
                     &::before {
@@ -1843,7 +1864,7 @@ Features CSS
         line-height: 55px;
         background: #cdf1d8;
         border-radius: 50%;
-        color: $light-green-color;
+        color: $light-blue-color;
         left: 20px;
         top: 30px;
         -webkit-transition: $transition;
@@ -1865,7 +1886,7 @@ Features CSS
         box-shadow: 0 2px 48px 0 rgba(0, 0, 0, 0.08);
 
         .icon {
-            background: $light-green-color;
+            background: $light-blue-color;
             color: $white-color;
 
             &.bg-c679e3 {
@@ -1909,7 +1930,7 @@ Features CSS
         background: #cdf1d8;
         display: inline-block;
         border-radius: 50%;
-        color: $light-green-color;
+        color: $light-blue-color;
         -webkit-transition: $transition;
         transition: $transition;
 
@@ -1927,7 +1948,7 @@ Features CSS
         position: absolute;
         width: 0;
         height: 4px;
-        background: $light-green-color;
+        background: $light-blue-color;
         opacity: 0;
         visibility: hidden;
         bottom: 0;
@@ -1947,7 +1968,7 @@ Features CSS
         box-shadow: 0 2px 48px 0 rgba(0, 0, 0, 0.08);
 
         .icon {
-            background: $light-green-color;
+            background: $light-blue-color;
             color: $white-color;
 
             &.bg-c679e3 {
@@ -1985,7 +2006,7 @@ Features Details CSS
             padding-left: 15px;
 
             &::before {
-                background: $light-green-color;
+                background: $light-blue-color;
                 width: 8px;
                 height: 8px;
                 left: 0;
@@ -2021,7 +2042,7 @@ Features Details CSS
                 display: block;
                 padding: 12px 20px 12px 51px;
                 text-decoration: none;
-                color: $black-color;
+                color: $heading-color;
                 position: relative;
                 border-bottom: 1px solid $white-color;
                 font: {
@@ -2035,7 +2056,7 @@ Features Details CSS
                     width: 40px;
                     text-align: center;
                     height: 100%;
-                    background: $light-green-color;
+                    background: $light-blue-color;
                     color: $white-color;
 
                     &::before {
@@ -2147,7 +2168,7 @@ Team CSS
                     &:hover {
                         -webkit-transform: translateY(-5px);
                         transform: translateY(-5px);
-                        color: $light-green-color;
+                        color: $light-blue-color;
                     }
                     svg {
                         width: 19px;
@@ -2193,7 +2214,7 @@ Team CSS
                 height: 0;
             }
             img {
-                border-color: $light-green-color;
+                border-color: $light-blue-color;
             }
         }
         .team-info {
@@ -2252,7 +2273,7 @@ Works CSS
             width: 19px;
         }
         &:hover {
-            background: $black-color;
+            background: $heading-color;
             color: $white-color;
         }
     }
@@ -2325,7 +2346,7 @@ Fun Facts CSS
     text-align: center;
 
     h3 {
-        color: $light-green-color;
+        color: $light-blue-color;
         font-size: 32px;
         margin-bottom: 7px;
     }
@@ -2355,7 +2376,7 @@ Fun Facts CSS
         margin-top: -27px;
 
         &::before, &::after {
-            background: $light-green-color;
+            background: $light-blue-color;
         }
     }
     .btn-primary {
@@ -2425,7 +2446,7 @@ Pricing CSS
         margin-bottom: 30px;
 
         span {
-            color: $light-green-color;
+            color: $light-blue-color;
             font: {
                 size: 30px;
                 weight: 600;
@@ -2492,7 +2513,7 @@ Pricing CSS
             box-shadow: 0 13px 27px 0 rgba(198, 121, 227, 0.25);
 
             &::after, &::before {
-                background: $light-green-color;
+                background: $light-blue-color;
                 -webkit-box-shadow: 0 13px 27px 0 rgba(68, 206, 111, 0.25);
                 box-shadow: 0 13px 27px 0 rgba(68, 206, 111, 0.25);
             }
@@ -2526,7 +2547,7 @@ Pricing CSS
         margin-bottom: 20px;
 
         span {
-            color: $light-green-color;
+            color: $light-blue-color;
             font: {
                 size: 30px;
                 weight: 600;
@@ -2568,7 +2589,7 @@ Pricing CSS
             box-shadow: 0 13px 27px 0 rgba(198, 121, 227, 0.25);
 
             &::after, &::before {
-                background: $light-green-color;
+                background: $light-blue-color;
                 -webkit-box-shadow: 0 13px 27px 0 rgba(68, 206, 111, 0.25);
                 box-shadow: 0 13px 27px 0 rgba(68, 206, 111, 0.25);
             }
@@ -2627,7 +2648,7 @@ Domain Search CSS
             width: 22%;
             height: 55px;
             border-radius: 30px;
-            background-color: $light-green-color;
+            background-color: $light-blue-color;
             color: $white-color;
             outline: 0;
             cursor: pointer;
@@ -2702,7 +2723,7 @@ Feedback CSS
 
                 img {
                     border-radius: 50%;
-                    border: 2px solid $light-green-color;
+                    border: 2px solid $light-blue-color;
                     padding: 3px;
                 }
             }
@@ -2752,7 +2773,7 @@ Feedback CSS
                     transition: $transition;
                     display: inline-block;
                     position: relative;
-                    border: 2px solid $light-green-color;
+                    border: 2px solid $light-blue-color;
                     border-radius: 50%;
                     padding: 3px;
                     width: 85px;
@@ -2813,7 +2834,7 @@ Feedback CSS
         }
         &:hover, &:hover {
             color: $white-color;
-            border-color: $light-green-color;
+            border-color: $light-blue-color;
 
             &::before, &::before {
                 opacity: 1;
@@ -2897,10 +2918,10 @@ Feedback CSS
                 }
                 &:hover, &.active {
                     span {
-                        border-color: $light-green-color;
+                        border-color: $light-blue-color;
 
                         &::before {
-                            background: $light-green-color;
+                            background: $light-blue-color;
                         }
                     }
                 }
@@ -2930,7 +2951,7 @@ Feedback CSS
                 display: inline-block !important;
                 width: 75px;
                 border-radius: 50%;
-                border: 3px solid $light-green-color;
+                border: 3px solid $light-blue-color;
             }
         }
         .title {
@@ -2990,7 +3011,7 @@ Ready To Talk CSS
     }
     .btn {
         &::before, &::after {
-            background: $light-green-color;
+            background: $light-blue-color;
         }
     }
     .btn-primary {
@@ -3002,12 +3023,12 @@ Ready To Talk CSS
             background-color: $white-color;
         }
         &:hover, &:focus {
-            color: $black-color;
+            color: $heading-color;
             -webkit-box-shadow: 0 5px 20px 0 rgba(68, 206, 111, 0.25);
             box-shadow: 0 5px 20px 0 rgba(68, 206, 111, 0.25);
         }
         &:not(:disabled):not(.disabled).active, &:not(:disabled):not(.disabled):active, & .show > &.dropdown-toggle {
-            color: $black-color;
+            color: $heading-color;
         }
     }
     span {
@@ -3136,7 +3157,7 @@ Blog CSS
         }
         span {
             display: block;
-            color: $black-color;
+            color: $heading-color;
             margin: 15px 0;
             text-transform: capitalize;
 
@@ -3145,12 +3166,12 @@ Blog CSS
                 margin-left: 5px;
 
                 &:hover {
-                    color: $light-green-color;
+                    color: $light-blue-color;
                 }
             }
         }
         .read-more-btn {
-            color: $black-color;
+            color: $heading-color;
             font-weight: 500;
 
             svg {
@@ -3159,7 +3180,7 @@ Blog CSS
                 width: 15px;
             }
             &:hover {
-                color: $light-green-color;
+                color: $light-blue-color;
 
                 svg {
                     margin-left: 5px;
@@ -3226,8 +3247,8 @@ Shop CSS
         .add-to-cart-btn {
             display: block;
             width: 100%;
-            color: $black-color;
-            border: 1px solid $black-color;
+            color: $heading-color;
+            border: 1px solid $heading-color;
             padding: 10px 15px;
             text-transform: uppercase;
             font-weight: 500;
@@ -3301,7 +3322,7 @@ Shop CSS
                         width: 20px;
                     }
                     &:hover, &:focus {
-                        background-color: $light-green-color;
+                        background-color: $light-blue-color;
                         color: $white-color;
                     }
                 }
@@ -3321,7 +3342,7 @@ Shop CSS
     &:hover {
         .products-content {
             .add-to-cart-btn {
-                background-color: $black-color;
+                background-color: $heading-color;
                 color: $white-color;
             }
         }
@@ -3386,7 +3407,7 @@ Shop CSS
                 transition: $transition;
             }
             &:hover, &:focus {
-                background-color: $light-green-color;
+                background-color: $light-blue-color;
                 color: $white-color;
 
                 span {
@@ -3471,7 +3492,7 @@ Shop CSS
                 }
             }
             button {
-                background: $light-green-color;
+                background: $light-blue-color;
                 color: $white-color;
                 border: none;
                 height: 46px;
@@ -3602,7 +3623,7 @@ Shop Details CSS
         margin-bottom: 20px;
 
         span {
-            color: $light-green-color;
+            color: $light-blue-color;
         }
     }
     form {
@@ -3664,7 +3685,7 @@ Shop Details CSS
             }
         }
         button {
-            background: $light-green-color;
+            background: $light-blue-color;
             color: $white-color;
             border: none;
             height: 46px;
@@ -3684,7 +3705,7 @@ Shop Details CSS
         .add-to-wishlist-btn {
             margin-left: 5px;
             background: transparent;
-            color: $black-color;
+            color: $heading-color;
             border: 1px solid #eeeeee;
             position: relative;
             top: -3px;
@@ -3712,7 +3733,7 @@ Shop Details CSS
                 box-shadow: 0 13px 27px 0 rgba(198, 121, 227, 0.25);
 
                 &::after, &::before {
-                    background: $light-green-color;
+                    background: $light-blue-color;
                     -webkit-box-shadow: 0 13px 27px 0 rgba(68, 206, 111, 0.25);
                     box-shadow: 0 13px 27px 0 rgba(68, 206, 111, 0.25);
                 }
@@ -3749,9 +3770,9 @@ Shop Details CSS
                     text-align: center;
                     line-height: 29px;
                     height: 32px;
-                    border: 1px solid $light-green-color;
+                    border: 1px solid $light-blue-color;
                     border-radius: 50%;
-                    color: $light-green-color;
+                    color: $light-blue-color;
 
                     svg {
                         width: 15px;
@@ -3793,7 +3814,7 @@ Shop Details CSS
                         }
                     }
                     &:hover {
-                        background: $light-green-color;
+                        background: $light-blue-color;
                         color: $white-color;
                     }
                 }
@@ -3831,7 +3852,7 @@ Shop Details CSS
                     height: 4px;
                     top: 0;
                     left: 0;
-                    background: $light-green-color;
+                    background: $light-blue-color;
                 }
             }
             &.inactive {
@@ -4040,7 +4061,7 @@ Cart CSS
                             display: inline-block;
 
                             &:hover {
-                                color: $light-green-color;
+                                color: $light-blue-color;
                             }
                         }
                     }
@@ -4113,7 +4134,7 @@ Cart CSS
         li {
             border: 1px solid #eaedff;
             padding: 10px 15px;
-            color: $black-color;
+            color: $heading-color;
             overflow: hidden;
 
             &:first-child {
@@ -4139,24 +4160,24 @@ Checkout CSS
     background: $white-color;
     padding: 18px 25px 15px;
     margin-bottom: 35px;
-    border-top: 3px solid $light-green-color;
+    border-top: 3px solid $light-blue-color;
 
     svg {
-        color: $light-green-color;
+        color: $light-blue-color;
         margin-right: 4px;
         width: 16px;
     }
     span {
         display: inline-block;
-        color: $light-green-color;
+        color: $light-blue-color;
 
         a {
             font-weight: 500;
             display: inline-block;
-            color: $black-color;
+            color: $heading-color;
 
             &:hover, &:focus {
-                color: $light-green-color;
+                color: $light-blue-color;
             }
         }
     }
@@ -4188,7 +4209,7 @@ Checkout CSS
             right: 0;
         }
         &:hover {
-            color: $black-color;
+            color: $heading-color;
         }
     }
     input {
@@ -4205,7 +4226,7 @@ Checkout CSS
             weight: 600;
         };
         &::placeholder {
-            color: $black-color;
+            color: $heading-color;
         }
     }
 }
@@ -4294,13 +4315,13 @@ Checkout CSS
                                 display: inline-block;
 
                                 &:hover {
-                                    color: $light-green-color;
+                                    color: $light-blue-color;
                                 }
                             }
                         }
                         &.order-subtotal, &.order-shipping, &.total-price {
                             span {
-                                color: $black-color;
+                                color: $heading-color;
                                 font-weight: 500;
                             }
                         }
@@ -4325,7 +4346,7 @@ Checkout CSS
                 cursor: pointer;
                 display: block;
                 font-weight: 600;
-                color: $black-color;
+                color: $heading-color;
                 position: relative;
                 margin-bottom: 8px;
             }
@@ -4344,7 +4365,7 @@ Checkout CSS
                 content: '';
                 width: 12px;
                 height: 12px;
-                background: $light-green-color;
+                background: $light-blue-color;
                 position: absolute;
                 top: 7px;
                 left: 3px;
@@ -4433,7 +4454,7 @@ FAQ CSS
                 display: block;
                 padding: 12px 20px;
                 text-decoration: none;
-                color: $black-color;
+                color: $heading-color;
                 position: relative;
                 border-bottom: 1px solid $white-color;
                 background: #f5f9ff;
@@ -4500,7 +4521,7 @@ Pagination CSS
 
                 &:hover, &:focus {
                     color: $white-color;
-                    background-color: $light-green-color;
+                    background-color: $light-blue-color;
                     -webkit-box-shadow: unset;
                     box-shadow: unset;
                 }
@@ -4511,7 +4532,7 @@ Pagination CSS
             &.active {
                 .page-link {
                     color: $white-color;
-                    background-color: $light-green-color;
+                    background-color: $light-blue-color;
                 }
             }
         }
@@ -4541,7 +4562,7 @@ Blog Details CSS
                 text-align: center;
                 font-size: 24px;
                 font-style: italic;
-                background: $light-green-color;
+                background: $light-blue-color;
                 color: $white-color;
                 border-radius: 5px;
                 padding-top: 18px;
@@ -4561,7 +4582,7 @@ Blog Details CSS
 
                     li {
                         a {
-                            background: $light-green-color;
+                            background: $light-blue-color;
                             color: $white-color;
                             padding: 5px 15px 3px;
                             display: inline-block;
@@ -4582,7 +4603,7 @@ Blog Details CSS
             .blockquote {
                 background: $bg-color;
                 padding: 25px;
-                border-left: 4px solid $light-green-color;
+                border-left: 4px solid $light-blue-color;
                 margin: {
                     bottom: 20px;
                     top: 20px;
@@ -4610,12 +4631,12 @@ Blog Details CSS
                             line-height: 38px;
                             border: 1px solid #eeeeee;
                             border-radius: 50%;
-                            color: $black-color;
+                            color: $heading-color;
 
                             &:hover, &:focus {
                                 color: $white-color;
-                                border-color: $light-green-color;
-                                background-color: $light-green-color;
+                                border-color: $light-blue-color;
+                                background-color: $light-blue-color;
                             }
                             svg {
                                 width: 16px;
@@ -4651,8 +4672,8 @@ Blog Details CSS
 
                 &:hover, &:focus {
                     color: $white-color;
-                    background: $light-green-color;
-                    border-color: $light-green-color;
+                    background: $light-blue-color;
+                    border-color: $light-blue-color;
                 }
             }
         }
@@ -4737,7 +4758,7 @@ Project Details CSS
         top: 0;
         width: 100%;
         height: 100%;
-        background: $black-color;
+        background: $heading-color;
         opacity: 0;
         visibility: hidden;
         -webkit-transition: $transition;
@@ -4760,7 +4781,7 @@ Project Details CSS
         height: 35px;
 
         &:hover {
-            color: $light-green-color;
+            color: $light-blue-color;
         }
     }
     &:hover {
@@ -4815,7 +4836,7 @@ Project Details CSS
                             width: 18px;
                         }
                         &:hover {
-                            color: $light-green-color;
+                            color: $light-blue-color;
                             -webkit-transform: translateY(-5px);
                             transform: translateY(-5px);
                         }
@@ -4850,7 +4871,7 @@ Contact CSS
         background: $bg-color;
         border-radius: 50%;
         font-size: 30px;
-        color: $light-green-color;
+        color: $light-blue-color;
         -webkit-transition: $transition;
         transition: $transition;
     }
@@ -4865,7 +4886,7 @@ Contact CSS
             color: $paragraph-color;
 
             &:hover {
-                color: $light-green-color;
+                color: $light-blue-color;
             }
         }
     }
@@ -4875,7 +4896,7 @@ Contact CSS
 
         .icon {
             color: $white-color;
-            background: $light-green-color;
+            background: $light-blue-color;
         }
     }
 }
@@ -4939,7 +4960,7 @@ Coming Soon CSS
                 width: 35px;
                 height: 35px;
                 line-height: 35px;
-                background: $light-green-color;
+                background: $light-blue-color;
                 color: $white-color;
                 border-radius: 50%;
 
@@ -4959,7 +4980,7 @@ Coming Soon CSS
                     background-color: #c13584;
                 }
                 &:hover, &:focus {
-                    background-color: $light-green-color;
+                    background-color: $light-blue-color;
                 }
             }
         }
@@ -5007,7 +5028,7 @@ Coming Soon CSS
             right: 3px;
             top: 3px;
             height: 50px;
-            background: $light-green-color;
+            background: $light-blue-color;
             color: $white-color;
             border: none;
             border-radius: 40px;
@@ -5151,7 +5172,7 @@ CTA CSS
                 box-shadow: 0 13px 27px 0 rgba(68, 206, 111, 0.25);
             }
             &:hover, &:focus {
-                color: $light-green-color;
+                color: $light-blue-color;
             }
         }
     }
@@ -5269,7 +5290,7 @@ Repair About CSS
 .repair-about-content {
     .sub-title {
         text-transform: uppercase;
-        color: $light-green-color;
+        color: $light-blue-color;
         display: block;
         font: {
             size: 15px;
@@ -5326,7 +5347,7 @@ Repair About CSS
                 svg {
                     margin-right: 5px;
                     display: inline-block;
-                    color: $light-green-color;
+                    color: $light-blue-color;
                     -webkit-transition: $transition;
                     transition: $transition;
                     width: 18px;
@@ -5481,7 +5502,7 @@ Repair Services CSS
     }
     .icon {
         display: inline-block;
-        color: $light-green-color;
+        color: $light-blue-color;
         width: 85px;
         height: 85px;
         line-height: 85px;
@@ -5504,7 +5525,7 @@ Repair Services CSS
         background-color: $bg-color3;
         height: 35px;
         line-height: 35px;
-        color: $black-color;
+        color: $heading-color;
         border-radius: 50%;
 
         svg {
@@ -5532,7 +5553,7 @@ Repair Services CSS
         }
         a {
             background-color: $white-color;
-            color: $light-green-color;
+            color: $light-blue-color;
         }
     }
 }
@@ -5652,7 +5673,7 @@ Repair Why Choose Us CSS
         background-color: #eef0f3;
         height: 40px;
         line-height: 40px;
-        color: $black-color;
+        color: $heading-color;
         border-radius: 50%;
 
         svg {
@@ -5705,10 +5726,10 @@ Repair Why Choose Us CSS
         }
     }
     &:hover, &:focus {
-        border-color: $light-green-color;
+        border-color: $light-blue-color;
 
         a {
-            background-color: $light-green-color;
+            background-color: $light-blue-color;
             color: $white-color;
         }
     }
@@ -5740,7 +5761,7 @@ Repair Feedback CSS
         };
         img {
             border-radius: 50%;
-            border: 2px solid $light-green-color;
+            border: 2px solid $light-blue-color;
             padding: 3px;
             display: inline-block;
             position: absolute;
@@ -5805,7 +5826,7 @@ IoT Main Banner CSS
     max-width: 445px;
 
     span {
-        color: $light-green-color;
+        color: $light-blue-color;
         font-size: 15px;
         display: block;
     }
@@ -6001,7 +6022,7 @@ Iot Services CSS
     }
     .icon {
         display: inline-block;
-        color: $light-green-color;
+        color: $light-blue-color;
         width: 85px;
         height: 85px;
         line-height: 85px;
@@ -6024,7 +6045,7 @@ Iot Services CSS
         background-color: $bg-color3;
         height: 35px;
         line-height: 35px;
-        color: $black-color;
+        color: $heading-color;
         border-radius: 50%;
 
         svg {
@@ -6048,7 +6069,7 @@ Iot Services CSS
         }
         a {
             background-color: $white-color;
-            color: $light-green-color;
+            color: $light-blue-color;
         }
     }
 }
@@ -6174,7 +6195,7 @@ IoT Why Choose Us CSS
         background-color: #eef0f3;
         height: 40px;
         line-height: 40px;
-        color: $black-color;
+        color: $heading-color;
         border-radius: 50%;
 
         svg {
@@ -6213,10 +6234,10 @@ IoT Why Choose Us CSS
         }
     }
     &:hover, &:focus {
-        border-color: $light-green-color;
+        border-color: $light-blue-color;
 
         a {
-            background-color: $light-green-color;
+            background-color: $light-blue-color;
             color: $white-color;
         }
     }
@@ -6267,7 +6288,7 @@ Footer CSS
                     color: $paragraph-color;
 
                     &:hover {
-                        color: $light-green-color;
+                        color: $light-blue-color;
                         padding-left: 7px;
                     }
                 }
@@ -6298,7 +6319,7 @@ Footer CSS
                     color: $paragraph-color;
 
                     &:hover {
-                        color: $light-green-color;
+                        color: $light-blue-color;
                     }
                 }
             }
@@ -6313,9 +6334,9 @@ Footer CSS
                     text-align: center;
                     line-height: 27px;
                     height: 32px;
-                    border: 1px solid $light-green-color;
+                    border: 1px solid $light-blue-color;
                     border-radius: 50%;
-                    color: $light-green-color;
+                    color: $light-blue-color;
 
                     svg {
                         width: 15px;
@@ -6357,7 +6378,7 @@ Footer CSS
                         }
                     }
                     &:hover {
-                        background: $light-green-color;
+                        background: $light-blue-color;
                         color: $white-color;
                     }
                 }
@@ -6396,7 +6417,7 @@ Go Top CSS
 
     &:hover {
         color: $white-color;
-        background: $light-green-color;
+        background: $light-blue-color;
     }
 }
 
@@ -6429,9 +6450,10 @@ ML Main Banner CSS
     position: relative;
     z-index: 1;
     padding: {
-        top: 130px;
-        bottom: 140px;
+        top: 10%;
+        bottom: 12%;
     };
+    height: 80vh;
     .container-fluid {
         padding: {
             left: 70px;
@@ -6442,22 +6464,27 @@ ML Main Banner CSS
 .ml-banner-content {
     h1 {
         margin-bottom: 15px;
-        line-height: 1.3;
+        line-height: 1.1;
         font: {
-            size: 40px;
-            weight: 500;
+            size: 80px;
+            weight: 800;
         };
     }
     p {
-        font-size: 15px;
+        font-size: 30px;
         max-width: 490px;
+        line-height: 1.2;
     }
     .btn {
         margin-top: 5px;
     }
+    padding: 0px 5% 0px 0px;
 }
 .ml-banner-single-image {
-    text-align: center;
+    text-align: left;
+}
+.wow-image {
+    width: 700px;
 }
 .ml-main-section {
     position: relative;
@@ -6553,10 +6580,10 @@ ML Partner CSS
 .ml-partner-area {
     background: url('../images/hero/header-image2.png') no-repeat center;
     background-size: cover;
-    height: 200px;
-    &.mt-minus-top {
-        margin-top: -80px;
-    }
+    height: 20vh;
+    // &.mt-minus-top {
+    //     margin-top: -80px;
+    // }
 }
 .single-ml-partner {
     text-align: center;
@@ -6596,19 +6623,103 @@ ML Partner CSS
 Our Solutions CSS
 =================================================*/
 .solutions-area {
-    padding-bottom: 50px;
+    padding: 10% 0%;
     position: relative;
     z-index: 5;
+    height: 100vh;
 }
-.single-solutions-box {
+
+.solutions-boxes {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+}
+
+.solutions-box-area {
+    margin-top: 8%;
+}
+
+.single-solutions-box-0 {
     padding: 20px 15px;
     text-align: center;
     transition: $transition;
     position: relative;
     margin-bottom: 30px;
     z-index: 1;
-    border: 1px solid #c5fffd;
-    border-radius: 5px;
+    min-height: 300px;
+    .icon {
+        margin-bottom: 25px;
+        position: relative;
+        z-index: 1;
+        display: inline-block;
+
+        img {
+            transition: $transition;
+        }
+        &::before {
+            content: '';
+            position: absolute;
+            left: -5px;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: -1;
+            background: #f0fdfe;
+            box-shadow: 0 2px 48px 0 rgba(0, 0, 0, 0.09);
+            border-radius: 30% 70% 70% 30% / 40% 60% 40% 60%;
+            width: 60px;
+            height: 60px;
+        }
+    }
+    h3 {
+        font-size: 18px;
+        margin-bottom: 12px;
+    }
+    &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: -1;
+        width: 100%;
+        height: 100%;
+        background-image: url('../images/solutions-box/solution-box-1.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .learn-more-btn {
+        color: #365267;
+        font: {
+            size: $font-size;
+            weight: 600;
+        };
+        svg {
+            width: 18px;
+            position: relative;
+            top: -1px;
+            margin-right: 3px;
+        }
+        &:hover {
+            color: $light-blue-color;
+        }
+    }
+    &:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 2px 48px 0 rgba(0, 0, 0, 0.08);
+
+        .icon {
+            img {
+                transform: rotateY(-360deg);
+            }
+        }
+    }
+}
+.single-solutions-box-1 {
+    padding: 20px 15px;
+    text-align: center;
+    transition: $transition;
+    position: relative;
+    margin-bottom: 30px;
+    z-index: 1;
+    min-height: 300px;
 
     .icon {
         margin-bottom: 25px;
@@ -6644,9 +6755,10 @@ Our Solutions CSS
         top: 0;
         z-index: -1;
         width: 100%;
-        border-radius: 5px;
         height: 100%;
-        background: linear-gradient(to right top, #d5fefd, #e0fdff, #effbff, #fbfaff, #fffcff);
+        background-image: url('../images/solutions-box/solution-box-1.png');
+        background-repeat: no-repeat;
+        background-size: cover;
     }
     .learn-more-btn {
         color: #365267;
@@ -6661,7 +6773,157 @@ Our Solutions CSS
             margin-right: 3px;
         }
         &:hover {
-            color: $light-green-color;
+            color: $light-blue-color;
+        }
+    }
+    &:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 2px 48px 0 rgba(0, 0, 0, 0.08);
+
+        .icon {
+            img {
+                transform: rotateY(-360deg);
+            }
+        }
+    }
+}
+.single-solutions-box-2 {
+    padding: 20px 15px;
+    text-align: center;
+    transition: $transition;
+    position: relative;
+    margin-bottom: 30px;
+    z-index: 1;
+    min-height: 300px;
+
+    .icon {
+        margin-bottom: 25px;
+        position: relative;
+        z-index: 1;
+        display: inline-block;
+
+        img {
+            transition: $transition;
+        }
+        &::before {
+            content: '';
+            position: absolute;
+            left: -5px;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: -1;
+            background: #f0fdfe;
+            box-shadow: 0 2px 48px 0 rgba(0, 0, 0, 0.09);
+            border-radius: 30% 70% 70% 30% / 40% 60% 40% 60%;
+            width: 60px;
+            height: 60px;
+        }
+    }
+    h3 {
+        font-size: 18px;
+        margin-bottom: 12px;
+    }
+    &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: -1;
+        width: 100%;
+        height: 100%;
+        background-image: url('../images/solutions-box/solution-box-2.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .learn-more-btn {
+        color: #365267;
+        font: {
+            size: $font-size;
+            weight: 600;
+        };
+        svg {
+            width: 18px;
+            position: relative;
+            top: -1px;
+            margin-right: 3px;
+        }
+        &:hover {
+            color: $light-blue-color;
+        }
+    }
+    &:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 2px 48px 0 rgba(0, 0, 0, 0.08);
+
+        .icon {
+            img {
+                transform: rotateY(-360deg);
+            }
+        }
+    }
+}
+.single-solutions-box-3 {
+    padding: 20px 15px;
+    text-align: center;
+    transition: $transition;
+    position: relative;
+    margin-bottom: 30px;
+    z-index: 1;
+    min-height: 300px;
+
+    .icon {
+        margin-bottom: 25px;
+        position: relative;
+        z-index: 1;
+        display: inline-block;
+
+        img {
+            transition: $transition;
+        }
+        &::before {
+            content: '';
+            position: absolute;
+            left: -5px;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: -1;
+            background: #f0fdfe;
+            box-shadow: 0 2px 48px 0 rgba(0, 0, 0, 0.09);
+            border-radius: 30% 70% 70% 30% / 40% 60% 40% 60%;
+            width: 60px;
+            height: 60px;
+        }
+    }
+    h3 {
+        font-size: 18px;
+        margin-bottom: 12px;
+    }
+    &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: -1;
+        width: 100%;
+        height: 100%;
+        background-image: url('../images/solutions-box/solution-box-2.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .learn-more-btn {
+        color: #365267;
+        font: {
+            size: $font-size;
+            weight: 600;
+        };
+        svg {
+            width: 18px;
+            position: relative;
+            top: -1px;
+            margin-right: 3px;
+        }
+        &:hover {
+            color: $light-blue-color;
         }
     }
     &:hover {
@@ -6723,7 +6985,7 @@ ML About CSS
             height: 10px;
             width: 10px;
             border-radius: 50%;
-            background: $light-green-color;
+            background: $light-blue-color;
             animation: {
                 duration: 3s;
                 timing-function: linear;
@@ -6778,7 +7040,7 @@ ML Services CSS
         height: 30px;
         transition: $transition;
         transform: rotate(45deg);
-        background: $light-green-color;
+        background: $light-blue-color;
         visibility: hidden;
         opacity: 0;
     }
@@ -6905,7 +7167,7 @@ ML Feedback CSS
                     right: 0;
                     top: 0;
                     bottom: 0;
-                    background-color: $light-green-color;
+                    background-color: $light-blue-color;
                     margin: 2px;
                     content: '';
                     transition: $transition;
@@ -6915,7 +7177,7 @@ ML Feedback CSS
             }
             &:hover, &.active {
                 span {
-                    border-color: $light-green-color;
+                    border-color: $light-blue-color;
                     background-color: transparent;
 
                     &::before {
@@ -6975,7 +7237,7 @@ Free Trial Area CSS
             color: $white-color;
             border: none;
             outline: 0;
-            background-color: $black-color;
+            background-color: $heading-color;
             border-radius: 30px;
             padding: {
                 top: 3px;
@@ -7000,7 +7262,7 @@ Free Trial Area CSS
             border: none;
             padding: 0 30px;
             line-height: 50px;
-            background-color: $light-green-color;
+            background-color: $light-blue-color;
             border-radius: 0 30px 30px 0;
             transition: $transition;
             color: $white-color;
@@ -7058,7 +7320,7 @@ ML Projects Area CSS
     }
     .plus-icon {
         a {
-            background-color: $light-green-color;
+            background-color: $light-blue-color;
             width: 70px;
             height: 70px;
             position: absolute;
@@ -7147,7 +7409,7 @@ ML Projects Area CSS
                     right: 0;
                     top: 0;
                     bottom: 0;
-                    background-color: $light-green-color;
+                    background-color: $light-blue-color;
                     margin: 2px;
                     content: '';
                     transition: $transition;
@@ -7157,7 +7419,7 @@ ML Projects Area CSS
             }
             &:hover, &.active {
                 span {
-                    border-color: $light-green-color;
+                    border-color: $light-blue-color;
                     background-color: transparent;
 
                     &::before {
@@ -7208,14 +7470,14 @@ ML Pricing Tab CSS
                     size: 15px;
                 };
                 &:hover {
-                    color: $black-color;
+                    color: $heading-color;
                     background: linear-gradient(to left bottom, #fffcff, #fbfaff, #effbff, #e0fdff, #d5fefd);
                 }
             }
             &.current {
                 a {
                     color: $white-color;
-                    background: $black-color;
+                    background: $heading-color;
                 }
             }
             &:nth-child(1) {
@@ -7297,7 +7559,7 @@ ML Pricing Tab CSS
             };
             &::after {
                 border-radius: 30px;
-                background: $light-green-color;
+                background: $light-blue-color;
                 width: 100%;
                 opacity: 1;
                 visibility: visible;
@@ -7334,7 +7596,7 @@ ML Pricing Tab CSS
                 margin-bottom: 0;
             }
             svg {
-                color: $light-green-color;
+                color: $light-blue-color;
                 position: absolute;
                 left: 0;
                 top: 50%;
@@ -7394,7 +7656,7 @@ ML Pricing Tab CSS
                         color: $paragraph-color;
 
                         &:hover {
-                            color: $light-green-color;
+                            color: $light-blue-color;
                         }
                     }
                     &:last-child {
@@ -7520,7 +7782,7 @@ Our Solutions CSS
     z-index: 1;
 
     .icon {
-        color: $light-green-color;
+        color: $light-blue-color;
         position: relative;
         z-index: 1;
         margin-bottom: 30px;
@@ -7553,7 +7815,7 @@ Our Solutions CSS
             margin-right: 3px;
         }
         &:hover {
-            color: $light-green-color;
+            color: $light-blue-color;
         }
     }
 }
@@ -7628,7 +7890,7 @@ Agency About CSS
             height: 10px;
             width: 10px;
             border-radius: 50%;
-            background: $light-green-color;
+            background: $light-blue-color;
             animation: {
                 duration: 3s;
                 timing-function: linear;
@@ -7706,8 +7968,8 @@ Agency Services CSS
                 margin-left: 2px;
             }
             &:hover {
-                background-color: $light-green-color;
-                border-color: $light-green-color;
+                background-color: $light-blue-color;
+                border-color: $light-blue-color;
                 color: $white-color;
             }
         }
@@ -7924,7 +8186,7 @@ Blog CSS
                     color: $paragraph-color;
 
                     &:hover {
-                        color: $light-green-color;
+                        color: $light-blue-color;
                     }
                 }
                 &::before {
@@ -7973,8 +8235,8 @@ Blog CSS
                 margin-left: 2px;
             }
             &:hover {
-                background-color: $light-green-color;
-                border-color: $light-green-color;
+                background-color: $light-blue-color;
+                border-color: $light-blue-color;
                 color: $white-color;
             }
         }
