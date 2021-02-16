@@ -8,8 +8,6 @@ import Partner from '../components/home-one/Partner'
 import Footer from '../components/Layouts/Footer'
 import GoTop from '../components/Layouts/GoTop'
 import PageTitle from '../components/about/PageTitle'
-import AboutArea from '../components/about/AboutArea'
-
 class About extends React.Component {
     render() {
         return (
@@ -22,7 +20,6 @@ class About extends React.Component {
                     </Placeholder>
                     <Header />
                     <PageTitle />
-                    <AboutArea />
                     <Team />
                     <Partner />
                     <Funfacts />

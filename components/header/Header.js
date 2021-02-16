@@ -69,7 +69,7 @@ class Header extends React.Component {
                                     {
                                         menu.map(m => 
                                             <li className="nav-item">
-                                                <Link activeClassName="active" href="/about">
+                                                <Link activeClassName="active" href={`/${m.link}`}>
                                                     <a className="nav-link">{m.title}</a>
                                                 </Link>
                                             </li>

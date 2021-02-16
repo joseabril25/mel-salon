@@ -21,7 +21,7 @@ const menu = [
     },
     {
         title: 'Join Yehey!',
-        link: ''
+        link: 'registration'
     },
 ]
 

@@ -1,9 +1,9 @@
 import React from 'react'
-import * as Icon from 'react-feather';
+import Link from 'next/link'
 
 const Game = () => {
     return (
-        <section className="features-area ptb-80 bg-f7fafd">
+        <section className="features-area">
             <div className="container">
                 <div className="section-title">
                     <h1>Win Exciting Prices! Try Out Our Latest Products! </h1>
@@ -13,23 +13,19 @@ const Game = () => {
                 <div className="row">
                     <div className="col-lg-6 col-md-6">
                         <div className="single-features">
-                            <div className="icon">
-                                <Icon.Settings />
-                            </div>
-
-                            <h3>Application for Test Here</h3>
-                            <p>Lorem ipsum dolor amet, adipiscing, sed do eiusmod tempor incididunt ut labore dolore magna aliqua.</p>
+                            <img src={require("../../static/images/game/products.png")} className="wow fadeInUp game-image" data-wow-delay="0.5s" alt="image" />
+                            <Link href="#">
+                                <a className="btn btn-primary game-button">Apply Now To Try Out Your First Yehey! Product! Register Now!</a>
+                            </Link>
                         </div>
                     </div>
 
                     <div className="col-lg-6 col-md-6">
                         <div className="single-features">
-                            <div className="icon">
-                                <Icon.Mail />
-                            </div>
-
-                            <h3>Play goes here</h3>
-                            <p>Lorem ipsum dolor amet, adipiscing, sed do eiusmod tempor incididunt ut labore dolore magna aliqua.</p>
+                            <img src={require("../../static/images/game/wheel.png")} className="wow fadeInUp game-image" data-wow-delay="0.5s" alt="image" />
+                            <Link href="#">
+                                <a className="btn btn-primary game-button">Play Yehey! And Get A Chance To Win Your First Freebie! Register Now!</a>
+                            </Link>
                         </div>
                     </div>
                 </div>

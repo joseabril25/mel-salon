@@ -37,7 +37,7 @@ class GoTop extends React.Component {
         if (this.state.thePosition){
             return (
                 <div className="go-top" onClick={this.scrollToTop}>
-                    <Icon.ArrowUp />
+                    <Icon.ChevronUp />
                 </div>
             )
         }
