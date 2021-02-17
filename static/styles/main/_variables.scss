@@ -1,0 +1,52 @@
+$font-family: 'Arial-Rounded', sans-serif;
+$light-blue-color: #276f8f;
+$white-color: #ffffff;
+$heading-color: #276f8f;
+$paragraph-color: #276f8f;
+$purple-color: #c679e3;
+$orange-color: #fc9300;
+$bg-color: #f7fafd;
+$bg-color2: #f9f6f6;
+$bg-color3: #f9fafb;
+$bg-color4: #0f054b;
+$hosting-main-color: #032b8d;
+$gradient-color: linear-gradient(135deg, #23bdb8 0%, #43e794 100%);
+$gradient-color2: linear-gradient(to right bottom, #1fa2ff, #00c0ff, #00d9f2, #53eedd, #a6ffcb);
+$orange-gradient: linear-gradient(175deg, rgba(255,190,0,1) 0%, rgba(252,147,0,1) 100%); 
+$blue-gradient: linear-gradient(180deg, rgba(0,186,162,1) 0%, rgba(0,168,162,1) 100%); 
+$transition: .5s;
+$font-size: 14px;
+$error: #FF0000;
+
+$margin_sm: 8px;
+$margin_md: 15px;
+$margin: 22px;
+$margin_lg: 35px;
+$margin_xl: 60px;
+$margin_xxl: 80px;
+
+$size-small: 14px;
+$size-regular: 16px;
+$size-slider-menu: 18px;
+$size-medium: 22px;
+$size-card: 30px;
+$size-banner: 40px;
+$size-banner-text: 20px;
+$size-large: 45px;
+$size-title: 65px;
+
+$line-height-sm: 26px;
+$line-height-md: 36px;
+$line-height-lg: 50px;
+
+$header_logo_width: 180px;
+
+
+// Z-Indexes
+$slider: 98;
+$header: 100;
+$header_menu_mobile: 102;
+$modal: 101;
+$slider_text: 1;
+
+$status_bar_height: 30px;

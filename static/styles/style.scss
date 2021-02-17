@@ -72,6 +72,7 @@ $gradient-color2: linear-gradient(to right bottom, #1fa2ff, #00c0ff, #00d9f2, #5
 $orange-gradient: linear-gradient(175deg, rgba(255,190,0,1) 0%, rgba(252,147,0,1) 100%); 
 $transition: .5s;
 $font-size: 14px;
+$blue-gradient: linear-gradient(180deg, rgba(0,186,162,1) 0%, rgba(0,168,162,1) 100%); 
 
 body {
     font-family: $font-family;
@@ -93,6 +94,43 @@ a {
     &:hover, &:focus {
         color: $light-blue-color;
         text-decoration: none;
+    }
+}
+
+form {
+    input {
+        text-align: center;
+        border: 1px solid #eeeeee;
+        border-radius: 20px;
+        background: $white-color;
+        height: 55px;
+        padding: 15px;
+        outline: 0;
+        font-size: 20px;
+        width: 100%;
+        color: $paragraph-color;
+    }
+
+    button {
+        background: $light-blue-color;
+        color: $white-color;
+        font-size: 20px;
+        border: none;
+        border-radius: 20px;
+        height: 55px;
+        padding: 0 20px;
+        position: relative;
+        top: -3px;
+        cursor: pointer;
+        outline: 0;
+        -webkit-transition: $transition;
+        transition: $transition;
+        width: 70%;
+
+        &:hover, &:focus {
+            background-color: $orange-color;
+            color: $white-color;
+        }
     }
 }
 .d-table {

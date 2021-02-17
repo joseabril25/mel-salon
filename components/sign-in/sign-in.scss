@@ -1,0 +1,51 @@
+@import "../../static/styles/global-variables.scss";
+
+.signin-title {
+    color: $white-color;
+    font-weight: 900;
+}
+
+.contact-container {
+    // display:flex;
+    text-align: center;
+}
+
+.contact-form_group {
+    text-align: center;
+    margin-bottom: $margin - 4;
+  
+    &-error {
+      margin-bottom: $margin_sm + 2;
+      color: $error;
+      font-size: $size-small;
+    }
+}
+
+.fb-login {
+    background: $white-color;
+    color: $light-blue-color;
+    font-size: 20px;
+    border: none;
+    border-radius: 20px;
+    height: 55px;
+    padding: 0 20px;
+    position: relative;
+    top: -3px;
+    cursor: pointer;
+    outline: 0;
+    -webkit-transition: $transition;
+    transition: $transition;
+    width: 70%;
+
+    &:hover, &:focus {
+        background-color: $light-blue-color;
+        color: $white-color;
+    }
+}
+
+.divider-row {
+    margin: 20px 0px;
+    .divider {
+        color: $white-color;
+    }
+}

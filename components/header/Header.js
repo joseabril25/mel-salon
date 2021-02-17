@@ -3,7 +3,7 @@ import { withRouter } from 'next/router';
 import { connect } from 'react-redux'
 import Link from '../common/ActiveLink'
 import menu from './header-list';
-
+import { toggleModal } from '../../store/actions/app.actions';
 class Header extends React.Component {
 
     state = {
@@ -69,9 +69,13 @@ class Header extends React.Component {
                                     {
                                         menu.map(m => 
                                             <li className="nav-item">
-                                                <Link activeClassName="active" href={`/${m.link}`}>
-                                                    <a className="nav-link">{m.title}</a>
-                                                </Link>
+                                            {
+                                                m.title === 'Login' ?
+                                                    <a className="nav-link" onClick={ () => this.props.handleToggleModal(true)}>{m.title}</a> :
+                                                    <Link activeClassName="active" href={`/${m.link}`}>
+                                                        <a className="nav-link">{m.title}</a>
+                                                    </Link>
+                                            }
                                             </li>
                                         )
                                     }
@@ -94,4 +98,10 @@ const mapStateToProps = (state)=>{
     }
 }
 
-export default withRouter(connect(mapStateToProps)(Header))
+const mapDispatchToProps = dispatch => {
+    return {
+        handleToggleModal: () => dispatch(toggleModal(true))
+    }
+  }
+
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Header))
