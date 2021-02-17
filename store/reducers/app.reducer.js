@@ -2,13 +2,7 @@ import { appTypes } from "../types";
 
 const initialState = {
   isModalOpen: false,
-//   hasOnboarding: true,
-//   hasEarlyTracked: true,
-//   dealsCount: 0,
-//   dealsCountIsLoading: false,
-
-//   // Used for reinstallation
-//   session: false,
+  modalType: null,
 };
 
 const appReducer = (state = initialState, action) => {
@@ -17,6 +11,11 @@ const appReducer = (state = initialState, action) => {
       return {
         ...state,
         isModalOpen: action.payload,
+      };
+    case appTypes.APP_TYPE_MODAL:
+      return {
+        ...state,
+        modalType: action.payload,
       };
     default: {
       return state;

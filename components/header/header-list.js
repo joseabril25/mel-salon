@@ -13,7 +13,7 @@ const menu = [
     },
     {
         title: 'Apply for Test',
-        link: ''
+        link: 'apply-for-test'
     },
     {
         title: 'Login',

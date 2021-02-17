@@ -9,7 +9,6 @@ import ModalComp from '../modal';
 const MainContainer = ({ children }) => {
 
     const isModalOpen = useSelector(({app}) => app.isModalOpen);
-    console.log("🚀 ~ file: main-container.js ~ line 10 ~ MainContainer ~ isModalOpen", isModalOpen)
     return (
         <NoSSR>
             <Preloader>

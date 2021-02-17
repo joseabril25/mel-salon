@@ -71,7 +71,7 @@ class Header extends React.Component {
                                             <li className="nav-item">
                                             {
                                                 m.title === 'Login' ?
-                                                    <a className="nav-link" onClick={ () => this.props.handleToggleModal(true)}>{m.title}</a> :
+                                                    <a className="nav-link" onClick={ () => this.props.handleToggleModal()}>{m.title}</a> :
                                                     <Link activeClassName="active" href={`/${m.link}`}>
                                                         <a className="nav-link">{m.title}</a>
                                                     </Link>
@@ -100,7 +100,7 @@ const mapStateToProps = (state)=>{
 
 const mapDispatchToProps = dispatch => {
     return {
-        handleToggleModal: () => dispatch(toggleModal(true))
+        handleToggleModal: () => dispatch(toggleModal({active: true, type: 'login'}))
     }
   }
 

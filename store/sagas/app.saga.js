@@ -1,8 +1,13 @@
 import { appTypes } from "../types";
-import { takeLatest, put, call } from 'redux-saga/effects';
+import { takeLatest, put, call, all } from 'redux-saga/effects';
 
 function* toggleModal({payload}) {
-    yield put({ type: appTypes.APP_SET_MODAL, payload });
+    console.log("🚀 ~ file: app.saga.js ~ line 5 ~ function*toggleModal ~ payload", payload)
+    const {active, type} = payload
+    yield all([
+        put({ type: appTypes.APP_SET_MODAL, payload: active}),
+        put({ type: appTypes.APP_TYPE_MODAL, payload: type}),
+    ])
 }
 
 // Generator: Watch Counter

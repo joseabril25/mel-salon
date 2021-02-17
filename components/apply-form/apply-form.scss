@@ -1,0 +1,196 @@
+@import "../../static/styles/global-variables.scss";
+
+.signin-title {
+    color: $white-color;
+    font-weight: 900;
+}
+
+.contact-container {
+    // display:flex;
+    text-align: center;
+}
+
+.contact-form_group {
+    text-align: center;
+    margin-bottom: $margin - 4;
+  
+    &-error {
+      margin-bottom: $margin_sm + 2;
+      color: $error;
+      font-size: $size-small;
+    }
+}
+
+.fb-login {
+    background: $white-color;
+    color: $light-blue-color;
+    font-size: 20px;
+    border: none;
+    border-radius: 20px;
+    height: 55px;
+    padding: 0 20px;
+    position: relative;
+    top: -3px;
+    cursor: pointer;
+    outline: 0;
+    -webkit-transition: $transition;
+    transition: $transition;
+    width: 70%;
+
+    &:hover, &:focus {
+        background-color: $light-blue-color;
+        color: $white-color;
+    }
+}
+
+.divider-row {
+    margin: 20px 0px;
+    .divider {
+        color: $white-color;
+    }
+}
+
+.apply-form {
+    text-align: center;
+    margin: 5% 0%;
+    input {
+        text-align: center;
+        border: 3px solid $light-blue-color;
+        border-radius: 20px;
+        background: $white-color;
+        height: 60px;
+        padding: 15px;
+        outline: 0;
+        font-size: 20px;
+        width: 100%;
+        color: $paragraph-color;
+    }
+    textarea {
+        text-align: center;
+        border: 3px solid $light-blue-color;
+        border-radius: 20px;
+        background: $white-color;
+        height: 155px;
+        padding: 15px;
+        outline: 0;
+        font-size: 20px;
+        width: 100%;
+        color: $paragraph-color;
+    }
+
+    button {
+        background: $blue-gradient;
+        color: $white-color;
+        font-size: 20px;
+        border: none;
+        border-radius: 20px;
+        height: 55px;
+        padding: 0 20px;
+        position: relative;
+        top: -3px;
+        cursor: pointer;
+        outline: 0;
+        -webkit-transition: $transition;
+        transition: $transition;
+        width: 30%;
+
+        &:hover, &:focus {
+            background-color: $orange-color;
+            color: $white-color;
+        }
+    }
+    .row {
+        div {
+            margin: 5px auto;
+        }
+    }
+}
+
+.apply-image {
+    width: 200px;
+}
+
+.apply-branding-box-0 {
+    padding: 40px 15px;
+    text-align: center;
+    transition: $transition;
+    position: relative;
+    margin-bottom: 30px;
+    z-index: 1;
+    min-height: 350px;
+    max-height: 350px;
+    width: 98%;
+    border-radius: 25px;
+    
+    .icon {
+        margin-bottom: 25px;
+        position: relative;
+        z-index: 1;
+        display: inline-block;
+
+        img {
+            transition: $transition;
+        }
+        &::before {
+            content: '';
+            position: absolute;
+            left: -5px;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: -1;
+            background: #f0fdfe;
+            box-shadow: 0 2px 48px 0 rgba(0, 0, 0, 0.09);
+            border-radius: 30% 70% 70% 30% / 40% 60% 40% 60%;
+            width: 60px;
+            height: 60px;
+        }
+    }
+    h1 {
+        color:$white-color;
+    }
+
+    h3 {
+        font-size: 18px;
+        margin-bottom: 12px;
+    }
+    &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: -1;
+        width: 100%;
+        height: 100%;
+        background-image: $orange-gradient;
+    }
+    .learn-more-btn {
+        color: #365267;
+        font: {
+            size: $font-size;
+            weight: 600;
+        };
+        svg {
+            width: 18px;
+            position: relative;
+            top: -1px;
+            margin-right: 3px;
+        }
+        &:hover {
+            color: $light-blue-color;
+        }
+    }
+    &:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 2px 48px 0 rgba(0, 0, 0, 0.08);
+
+        .icon {
+            img {
+                transform: rotateY(-360deg);
+            }
+        }
+    }
+}
+
+.apply-content {
+    margin-top: 5%;
+}

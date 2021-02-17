@@ -1,0 +1,107 @@
+@import "../../static/styles/global-variables.scss";
+
+.signin-title {
+    color: $white-color;
+    font-weight: 900;
+}
+
+.contact-container {
+    // display:flex;
+    text-align: center;
+}
+
+.contact-form_group {
+    text-align: center;
+    margin-bottom: $margin - 4;
+  
+    &-error {
+      margin-bottom: $margin_sm + 2;
+      color: $error;
+      font-size: $size-small;
+    }
+}
+
+.fb-login {
+    background: $white-color;
+    color: $light-blue-color;
+    font-size: 20px;
+    border: none;
+    border-radius: 20px;
+    height: 55px;
+    padding: 0 20px;
+    position: relative;
+    top: -3px;
+    cursor: pointer;
+    outline: 0;
+    -webkit-transition: $transition;
+    transition: $transition;
+    width: 70%;
+
+    &:hover, &:focus {
+        background-color: $light-blue-color;
+        color: $white-color;
+    }
+}
+
+.divider-row {
+    margin: 20px 0px;
+    .divider {
+        color: $white-color;
+    }
+}
+
+.suggest-form {
+    text-align: center;
+    margin: 5% 0%;
+    input {
+        text-align: center;
+        border: 3px solid $light-blue-color;
+        border-radius: 20px;
+        background: $white-color;
+        height: 60px;
+        padding: 15px;
+        outline: 0;
+        font-size: 20px;
+        width: 100%;
+        color: $paragraph-color;
+    }
+    textarea {
+        text-align: center;
+        border: 3px solid $light-blue-color;
+        border-radius: 20px;
+        background: $white-color;
+        height: 155px;
+        padding: 15px;
+        outline: 0;
+        font-size: 20px;
+        width: 100%;
+        color: $paragraph-color;
+    }
+
+    button {
+        background: $blue-gradient;
+        color: $white-color;
+        font-size: 20px;
+        border: none;
+        border-radius: 20px;
+        height: 55px;
+        padding: 0 20px;
+        position: relative;
+        top: -3px;
+        cursor: pointer;
+        outline: 0;
+        -webkit-transition: $transition;
+        transition: $transition;
+        width: 30%;
+
+        &:hover, &:focus {
+            background-color: $orange-color;
+            color: $white-color;
+        }
+    }
+    .row {
+        div {
+            margin: 5px auto;
+        }
+    }
+}
