@@ -4,6 +4,7 @@ import { connect } from 'react-redux'
 import Link from '../common/ActiveLink'
 import menu from './header-list';
 import { toggleModal } from '../../store/actions/app.actions';
+
 class Header extends React.Component {
 
     state = {
@@ -100,7 +101,7 @@ const mapStateToProps = (state)=>{
 
 const mapDispatchToProps = dispatch => {
     return {
-        handleToggleModal: () => dispatch(toggleModal({active: true, type: 'login'}))
+        handleToggleModal: () => dispatch(toggleModal({active: true, type: 'login'})),
     }
   }
 

@@ -1,0 +1,270 @@
+@import "../../static/styles/global-variables.scss";
+
+/*================================================
+apply CSS
+=================================================*/
+
+.apply-header-head {
+    // background-image: url('../images/suggest-images/suggeset-bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 80vh;
+}
+.apply-title-container {
+    background-image: $orange-gradient;
+    padding: 30px 0px;
+    border-radius: 25px;
+
+    .apply-finish-title {
+        text-align: center;
+
+        h1 {
+            color: $white-color;
+        }
+        h3 {
+            color: $white-color;
+        }
+    }
+}
+
+.right-finish-title {
+    text-align: center;
+    padding: 0px;
+}
+
+.applyion-banner {
+    position: relative;
+    z-index: 1;
+    padding: 10% 3% 0% 3%;
+}
+
+.apply-confirm-box-mini {
+    padding: 20px 15px;
+    text-align: center;
+    transition: $transition;
+    position: relative;
+    margin-bottom: 30px;
+    z-index: 1;
+    min-height: 330px;
+    max-height: 330px;
+    .icon {
+        margin-bottom: 25px;
+        position: relative;
+        z-index: 1;
+        display: inline-block;
+
+        img {
+            transition: $transition;
+        }
+        &::before {
+            content: '';
+            position: absolute;
+            left: -5px;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: -1;
+            background: #f0fdfe;
+            box-shadow: 0 2px 48px 0 rgba(0, 0, 0, 0.09);
+            border-radius: 30% 70% 70% 30% / 40% 60% 40% 60%;
+            width: 60px;
+            height: 60px;
+        }
+    }
+    h3 {
+        font-size: 18px;
+        margin-bottom: 12px;
+    }
+    &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: -1;
+        width: 100%;
+        height: 100%;
+        background-image: url('../../static/images/solutions-box/solution-box-3.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .learn-more-btn {
+        color: #365267;
+        font: {
+            size: $font-size;
+            weight: 600;
+        };
+        svg {
+            width: 18px;
+            position: relative;
+            top: -1px;
+            margin-right: 3px;
+        }
+        &:hover {
+            color: $light-blue-color;
+        }
+    }
+    &:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 2px 48px 0 rgba(0, 0, 0, 0.08);
+
+        .icon {
+            img {
+                transform: rotateY(-360deg);
+            }
+        }
+    }
+}
+.apply-confirm-box-mini-rate {
+    padding: 20px 15px;
+    text-align: center;
+    transition: $transition;
+    position: relative;
+    margin-bottom: 30px;
+    z-index: 1;
+    min-height: 330px;
+    max-height: 330px;
+    .icon {
+        margin-bottom: 25px;
+        position: relative;
+        z-index: 1;
+        display: inline-block;
+
+        img {
+            transition: $transition;
+        }
+        &::before {
+            content: '';
+            position: absolute;
+            left: -5px;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: -1;
+            background: #f0fdfe;
+            box-shadow: 0 2px 48px 0 rgba(0, 0, 0, 0.09);
+            border-radius: 30% 70% 70% 30% / 40% 60% 40% 60%;
+            width: 60px;
+            height: 60px;
+        }
+    }
+    h3 {
+        font-size: 18px;
+        margin-bottom: 12px;
+    }
+    &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: -1;
+        width: 100%;
+        height: 100%;
+        background-image: url('../../static/images/apply-images/apply-rate.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .learn-more-btn {
+        color: #365267;
+        font: {
+            size: $font-size;
+            weight: 600;
+        };
+        svg {
+            width: 18px;
+            position: relative;
+            top: -1px;
+            margin-right: 3px;
+        }
+        &:hover {
+            color: $light-blue-color;
+        }
+    }
+    &:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 2px 48px 0 rgba(0, 0, 0, 0.08);
+
+        .icon {
+            img {
+                transform: rotateY(-360deg);
+            }
+        }
+    }
+}
+
+.apply-confirm-box {
+    padding: 40px 15px;
+    text-align: center;
+    transition: $transition;
+    position: relative;
+    z-index: 1;
+    min-height: 350px;
+    max-height: 350px;
+    width: 100%;
+    
+    .icon {
+        margin-bottom: 25px;
+        position: relative;
+        z-index: 1;
+        display: inline-block;
+
+        img {
+            transition: $transition;
+        }
+        &::before {
+            content: '';
+            position: absolute;
+            left: -5px;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: -1;
+            background: #f0fdfe;
+            box-shadow: 0 2px 48px 0 rgba(0, 0, 0, 0.09);
+            border-radius: 30% 70% 70% 30% / 40% 60% 40% 60%;
+            width: 60px;
+            height: 60px;
+        }
+    }
+    h1 {
+        color:$white-color;
+    }
+
+    h3 {
+        font-size: 18px;
+        margin-bottom: 12px;
+    }
+    &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: -1;
+        width: 100%;
+        height: 100%;
+        background-image: $orange-gradient;
+        border-radius: 25px;
+    }
+    .learn-more-btn {
+        color: #365267;
+        font: {
+            size: $font-size;
+            weight: 600;
+        };
+        svg {
+            width: 18px;
+            position: relative;
+            top: -1px;
+            margin-right: 3px;
+        }
+        &:hover {
+            color: $light-blue-color;
+        }
+    }
+    &:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 2px 48px 0 rgba(0, 0, 0, 0.08);
+
+        .icon {
+            img {
+                transform: rotateY(-360deg);
+            }
+        }
+    }
+}

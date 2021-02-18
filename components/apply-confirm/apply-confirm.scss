@@ -1,0 +1,72 @@
+@import "../../static/styles/global-variables.scss";
+
+/*================================================
+appcon CSS
+=================================================*/
+
+.appcon-header-head {
+    background-image: url('../../static/images/apply-images/apply-bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+.appcon-title-container {
+    background-image: $blue-gradient;
+    padding: 30px 0px;
+
+    .appcon-title {
+        text-align: center;
+        h1 {
+            color: $white-color;
+        }
+
+        
+    }
+}
+
+.appcon-banner {
+    position: relative;
+    z-index: 1;
+    padding: {
+        top: 10%;
+    };
+
+    .container-fluid {
+        padding: 5% 16%;
+    }
+}
+
+.blue-submit {
+    background: $orange-gradient;
+    color: $white-color;
+    font-size: 20px;
+    border: none;
+    border-radius: 20px;
+    height: 55px;
+    padding: 0 20px;
+    position: relative;
+    top: -3px;
+    cursor: pointer;
+    outline: 0;
+    -webkit-transition: $transition;
+    transition: $transition;
+    width: 20%;
+
+    &:hover, &:focus {
+        background-color: $orange-color;
+        color: $white-color;
+    }
+}
+
+.button-row {
+    text-align: center;
+    padding: 15px 0;
+}
+
+ul {
+    list-style: none;
+
+    h5 {
+        color: $yellow;
+    }
+}

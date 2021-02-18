@@ -90,7 +90,7 @@ a {
     transition: $transition;
     text-decoration: none;
     outline: 0 !important;
-
+    text-transform: uppercase;
     &:hover, &:focus {
         color: $light-blue-color;
         text-decoration: none;
@@ -152,6 +152,7 @@ p {
 .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
     color: $heading-color;
     font-weight: 500;
+    text-transform: uppercase;
 }
 .ptb-80 {
     padding: {
@@ -201,6 +202,40 @@ p {
 .btn-primary {
     color: $white-color;
     background-image: $orange-gradient;
+    box-shadow: 0 13px 27px 0 rgba(68, 206, 111, 0.25);
+
+    &:hover, &:focus, &:active {
+        color: $white-color;
+        background: $orange-gradient;
+        transform: translateY(-5px);
+        box-shadow: 0 13px 27px 0 rgba(198, 121, 227, 0.25);
+    }
+    &.focus, &:focus {
+        box-shadow: unset;
+    }
+    &:not(:disabled):not(.disabled).active:focus, &:not(:disabled):not(.disabled):active:focus, & .show > &.dropdown-toggle:focus {
+        box-shadow: unset;
+    }
+    &:not(:disabled):not(.disabled).active, &:not(:disabled):not(.disabled):active, & .show > &.dropdown-toggle {
+        color: $white-color;
+        background: $orange-gradient;
+        transform: translateY(-5px);
+        box-shadow: 0 13px 27px 0 rgba(198, 121, 227, 0.25);
+    }
+    &.disabled, &:disabled {
+        color: $white-color;
+        background-color: $light-blue-color;
+        box-shadow: 0 13px 27px 0 rgba(68, 206, 111, 0.25);
+        opacity: 1;
+    }
+    &.disabled:hover, &.disabled:focus, &:disabled:hover, &:disabled:focus {
+        background: $orange-gradient;
+        box-shadow: 0 13px 27px 0 rgba(198, 121, 227, 0.25);
+    }
+}
+.btn-secondary {
+    color: $white-color;
+    background-image: $blue-gradient;
     box-shadow: 0 13px 27px 0 rgba(68, 206, 111, 0.25);
 
     &:hover, &:focus, &:active {

@@ -1,0 +1,36 @@
+@import "../../static/styles/global-variables.scss";
+
+.lucky-image {
+  width: 350px;
+}
+
+.play-button {
+  width: 30%;
+  margin-top: 5%;
+  height: 50px;
+  font: {
+      weight: 600;
+      size: 25px;
+      letter-spacing: 5px;
+  };
+}
+
+.lucky-wheel {
+  text-align: center;
+}
+
+.play-section {
+  position: relative;
+  z-index: 1;
+  padding: {
+      top: 10%;
+      bottom: 12%;
+  };
+  height: 80vh;
+  .container-fluid {
+      padding: {
+          left: 70px;
+          right: 70px;
+      };
+  }
+}

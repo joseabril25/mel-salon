@@ -5,7 +5,7 @@ const menu = [
     },
     {
         title: 'Play Yehey!',
-        link: ''
+        link: 'play-yehey'
     },
     {
         title: "Yehey's Choice",

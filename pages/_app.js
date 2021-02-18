@@ -14,7 +14,10 @@ import '../components/sign-in/sign-in.scss'
 import '../components/contact-us/contact-us.scss'
 import '../components/suggest-form/suggest-form.scss'
 import '../components/apply-form/apply-form.scss'
+import '../components/apply-confirm/apply-confirm.scss'
+import '../components/apply-finish/apply-finish.scss'
 import '../components/apply/apply.scss'
+import '../components/play/play.scss'
 // If you want to change the theme color you should comment out above line and uncomment the below line and change the color names from list
 /*
 * brink-pink-style.css

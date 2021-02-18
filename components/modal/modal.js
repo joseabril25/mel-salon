@@ -6,7 +6,7 @@ import SignIn from '../sign-in';
 import ContactUs from '../contact-us';
 
 const ModalComp = ({ }) => {
-  const dispatch = useDispatch(false);
+  const dispatch = useDispatch();
   const modalType = useSelector(({ app }) => app.modalType);
   const isModal = useSelector(({ app }) => app.isModalOpen);
 

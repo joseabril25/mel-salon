@@ -1,8 +1,9 @@
 import React from 'react';
+import { useDispatch } from 'react-redux';
 import ApplyForm from '../apply-form';
-import Link from 'next/link';
 
-const Apply = () => {
+const Apply = ({ }) => {
+
     return (
         <div className="apply-header-head">
             <div className="applyion-banner">
@@ -17,11 +18,11 @@ const Apply = () => {
                     <div className="row align-items-center apply-content">
                         <div className="col-lg-6 col-md-12 apply-title">
                             <div className='apply-branding-box-0'>
-                                <img src={require("../../static/images/branding-section/product-1.png")} className="apply-image" alt="image" />
+                                <img src={require("../../static/images/apply-images/product.png")} className="apply-image" alt="image" />
                             </div>
                         </div>
                         <div className="col-lg-6 col-md-12 apply-title">
-                                < ApplyForm />
+                            < ApplyForm />
                         </div>
                     </div>
                 </div>
