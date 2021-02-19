@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import Link from 'next/link'
-import ReactWOW from 'react-wow'
 import Partner from '../home-seven/Partner';
+import Wheel from '../wheel';
 
 const Play = () => {
+
     return (
         <div className="header-head">
             <div className="play-section">
@@ -20,9 +21,7 @@ const Play = () => {
 
                         <div className="col-lg-6 col-md-12">
                             <div className="ml-banner-single-image">
-                                <ReactWOW delay='0.5s' animation='fadeInUp'>
-                                    <img src={require("../../static/images/hero/header-image1.png")} className="wow fadeInUp wow-image" data-wow-delay="0.5s" alt="image" />
-                                </ReactWOW>
+                                <Wheel />
                             </div>
                         </div>
                     </div>

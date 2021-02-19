@@ -18,6 +18,7 @@ import '../components/apply-confirm/apply-confirm.scss'
 import '../components/apply-finish/apply-finish.scss'
 import '../components/apply/apply.scss'
 import '../components/play/play.scss'
+import '../components/wheel/wheel.scss'
 // If you want to change the theme color you should comment out above line and uncomment the below line and change the color names from list
 /*
 * brink-pink-style.css
