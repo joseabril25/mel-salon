@@ -5,7 +5,6 @@ import '../static/css/flaticon.css'
 import '../static/css/boxicons.min.css'
 import 'odometer/themes/odometer-theme-default.css';
 import 'react-toastify/dist/ReactToastify.css';
-import 'react-accessible-accordion/dist/fancy-example.css';
 import '../node_modules/react-modal-video/css/modal-video.min.css'
 import 'react-image-lightbox/style.css';
 import '../static/styles/style.scss'
