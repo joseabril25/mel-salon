@@ -5,7 +5,7 @@ import boxContent from './brand-content';
 const Brand = () => {
     return (
         <section className="branding-area">
-            <div>
+            <div >
                 <div className="row section-title branding-section">
                     <div className={`col-lg-6 col-sm-12 col-md-12`}>
                     </div>
@@ -24,12 +24,12 @@ const Brand = () => {
                             <h1>Check out Yehey!'s latest games & product samples for testing!</h1>
                             <div className="row branding-box-area">
                                 <div className='col-lg-6 col-sm-12 col-md-12'>
-                                    <Link href="#">
+                                    <Link href="/play-yehey">
                                         <a className="btn btn-secondary branding-button">Play Yehey!</a>
                                     </Link>
                                 </div>
                                 <div className='col-lg-6 col-sm-12 col-md-12'>
-                                    <Link href="#">
+                                    <Link href="/apply-for-test">
                                         <a className="btn btn-secondary branding-button">Apply For Test</a>
                                     </Link>
                                 </div>
@@ -44,7 +44,7 @@ const Brand = () => {
                                     <img src={require("../../static/images/branding-section/product-1.png")} className="side-image" alt="image" />
                                 </div>
                                 <div className='col-lg-6 col-sm-12 col-md-12'>
-                                    <Link href="#">
+                                    <Link href="/suggest-product">
                                         <a className="btn btn-secondary branding-button">Send Us Your Suggestions!</a>
                                     </Link>
                                 </div>

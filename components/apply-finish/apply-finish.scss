@@ -45,8 +45,9 @@ apply CSS
     position: relative;
     margin-bottom: 30px;
     z-index: 1;
-    min-height: 330px;
-    max-height: 330px;
+    min-height: 280px;
+    max-height: 280px;
+    display: flex;
     .icon {
         margin-bottom: 25px;
         position: relative;
@@ -82,9 +83,9 @@ apply CSS
         z-index: -1;
         width: 100%;
         height: 100%;
-        background-image: url('../../static/images/solutions-box/solution-box-3.jpg');
+        background-image: url('../../static/images/apply-images/play.png');
         background-repeat: no-repeat;
-        background-size: cover;
+        background-size: contain;
     }
     .learn-more-btn {
         color: #365267;
@@ -120,8 +121,9 @@ apply CSS
     position: relative;
     margin-bottom: 30px;
     z-index: 1;
-    min-height: 330px;
-    max-height: 330px;
+    min-height: 280px;
+    max-height: 280px;
+    display: flex;
     .icon {
         margin-bottom: 25px;
         position: relative;
@@ -157,9 +159,9 @@ apply CSS
         z-index: -1;
         width: 100%;
         height: 100%;
-        background-image: url('../../static/images/apply-images/apply-rate.jpg');
+        background-image: url('../../static/images/apply-images/rate.png');
         background-repeat: no-repeat;
-        background-size: cover;
+        background-size: contain;
     }
     .learn-more-btn {
         color: #365267;
@@ -267,4 +269,12 @@ apply CSS
             }
         }
     }
+}
+
+.apply-confirm-button {
+    width: 100%;
+    max-width: 100%;
+    padding: 15px 20px !important;
+    min-height: 80px;
+    align-self: flex-end;
 }

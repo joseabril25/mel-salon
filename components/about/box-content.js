@@ -3,13 +3,13 @@ const boxContent = [
         id: '0',
         class: '',
         buttonText: 'Apply To Test The Latest Products For Sampling!',
-        link: ''
+        link: 'apply-for-test'
     },
     {
         id: '1',
         class: '',
         buttonText: 'Play Yehey! \n To Win Prizes!',
-        link: ''
+        link: 'play-yehey'
     },
     {
         id: '2',

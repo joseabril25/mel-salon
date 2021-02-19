@@ -37,7 +37,7 @@
   border-radius: 20px;
   background-image: $blue-gradient;
   margin: auto;
-  max-width: 50%;
+  max-width: 40%;
   padding: 70px 0;
   position: relative;
   width: 720px;
@@ -54,13 +54,14 @@
     padding: 10px;
     transition: opacity 0.2s ease;
     outline: none;
+    z-index: 2;
     &:hover {
       opacity: 0.5;
     }
   }
 
   @include desktop {
-    padding: $margin-xxl;
+    padding: $margin;
   }
 }
 

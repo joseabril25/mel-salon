@@ -1,7 +1,7 @@
 const menu = [
     {
         title: 'Product Reviews',
-        link: ''
+        link: 'coming-soon'
     },
     {
         title: 'Play Yehey!',
@@ -9,7 +9,7 @@ const menu = [
     },
     {
         title: "Yehey's Choice",
-        link: ''
+        link: 'coming-soon'
     },
     {
         title: 'Apply for Test',

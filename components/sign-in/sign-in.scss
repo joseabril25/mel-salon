@@ -49,3 +49,53 @@
         color: $white-color;
     }
 }
+
+.login-logo {
+    margin-bottom: 20px;
+    width: 150px;
+}
+
+form {
+    input {
+        text-align: center;
+        border: 1px solid #eeeeee;
+        border-radius: 20px;
+        background: $white-color;
+        height: 55px;
+        padding: 15px;
+        outline: 0;
+        font-size: 20px;
+        width: 100%;
+        color: $paragraph-color;
+    }
+
+    button {
+        background: $yellow;
+        color: $paragraph-color;
+        font-size: 20px;
+        border: none;
+        border-radius: 20px;
+        height: 55px;
+        padding: 0 20px;
+        position: relative;
+        top: -3px;
+        cursor: pointer;
+        outline: 0;
+        -webkit-transition: $transition;
+        transition: $transition;
+        width: 70%;
+
+        &:hover, &:focus {
+            background-color: $orange-color;
+            color: $white-color;
+        }
+    }
+}
+
+.divider {
+    a {
+        color: $yellow;
+        text-decoration: underline;
+        margin-left: 2px;
+    }
+}

@@ -45,12 +45,7 @@ class Header extends React.Component {
                     <div className="container-fluid">
                         <nav className="navbar navbar-expand-md navbar-light">
                             <Link href="/">
-                                <a 
-                                    className="navbar-brand"
-                                    onClick={() => window.location.refresh()}
-                                >
-                                    <img src={require("../../static/images/logo.png")} alt="logo" />
-                                </a>
+                                <img className='logo-img' src={require("../../static/images/header-images/logo.png")} alt="logo" />
                             </Link>
 
                             <button 
@@ -103,6 +98,6 @@ const mapDispatchToProps = dispatch => {
     return {
         handleToggleModal: () => dispatch(toggleModal({active: true, type: 'login'})),
     }
-  }
+}
 
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Header))

@@ -1,9 +1,11 @@
 import React from 'react'
+import { useDispatch } from 'react-redux';
 import Link from 'next/link'
 import * as Icon from 'react-feather'
 import links from './footer-links';
-
+import { toggleModal } from '../../store/actions/app.actions';
 const Footer = () => {
+    const dispatch = useDispatch()
     return (
         <footer className="footer-area">
             <div >
@@ -85,9 +87,16 @@ const Footer = () => {
                                 {
                                     links.map(link => 
                                         <li>
+                                            {
+                                            link.title === 'Contact Us' ?
                                             <Link href="#">
+                                                <a onClick={() => dispatch(toggleModal({active: true, type: 'contact'}))}>{link.title}</a> 
+                                            </Link>
+                                            :
+                                            <Link href={`/${link.link}`}>
                                                 <a>{link.title}</a>
                                             </Link>
+                                            }
                                         </li>
                                     )
                                 }

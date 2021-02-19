@@ -25,7 +25,7 @@ const links = [
     },
     {
         title: 'Suggest',
-        link: ''
+        link: 'suggest-product'
     },
     {
         title: 'Contact Us',

@@ -1,6 +1,7 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
 import { connect } from 'react-redux';
+import * as Icon from 'react-feather'
 import fields, { defaultValues } from './contact-us.fields'
 
 const ContactUs = ({ isLoading }) => {
@@ -34,8 +35,10 @@ const { register, handleSubmit, errors, reset } = useForm();
             <div className="row contact-buttons">
                 <div className="col-lg-12 col-md-6">
                     <h5 className="button-label">EMAIL US</h5>
-                    <a href='mailto:yeheyphilippines@gmail.com' className='fb-login' >
+                    
+                    <a href='mailto:yeheyphilippines@gmail.com' className='contact-fb-login' >
                         {/* {isLoading && <div className={styles.spinner} />} */}
+                        <Icon.Mail />
                         yeheyphilippines@gmail.com
                     </a>
                 </div>
@@ -43,8 +46,9 @@ const { register, handleSubmit, errors, reset } = useForm();
             <div className="row contact-buttons">
                 <div className="col-lg-12 col-md-6">
                     <h5 className="button-label">FOLLOW US</h5>
-                    <a href='mailto:yeheyphilippines@gmail.com' className='fb-login' >
+                    <a href='mailto:yeheyphilippines@gmail.com' className='contact-fb-login' >
                         {/* {isLoading && <div className={styles.spinner} />} */}
+                        <Icon.Facebook className='fb-icon' />
                         www.facebook.com/YeheyPH
                     </a>
                 </div>

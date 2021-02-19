@@ -29,15 +29,15 @@ const ApplyFinish = () => {
                             <div className="row align-items-center apply-content">
                                 <div className="col-lg-6 col-md-12 right-finish-title">
                                     <div className='apply-confirm-box-mini'>
-                                        <Link href="#">
-                                            <a className="btn btn-secondary solutions-button">Play Yehey! To Win Exciting Prizes!</a>
+                                        <Link href="/play-yehey">
+                                            <a className="btn btn-secondary apply-confirm-button">Play Yehey! To Win Exciting Prizes!</a>
                                         </Link>
                                     </div>
                                 </div>
                                 <div className="col-lg-6 col-md-12 right-finish-title">
                                     <div className='apply-confirm-box-mini-rate'>
                                         <Link href="#">
-                                            <a className="btn btn-secondary solutions-button">Rate Your Favorite Product Here!</a>
+                                            <a className="btn btn-secondary apply-confirm-button">Rate Your Favorite Product Here!</a>
                                         </Link>
                                     </div>
                                 </div>
