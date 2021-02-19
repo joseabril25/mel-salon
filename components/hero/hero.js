@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Link from 'next/link'
 import ReactWOW from 'react-wow'
-import Partner from '../home-seven/Partner';
+import Partner from '../partner';
 
 const Hero = () => {
     return (

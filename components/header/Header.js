@@ -1,7 +1,7 @@
 import React from 'react'
 import { withRouter } from 'next/router';
 import { connect } from 'react-redux'
-import Link from '../common/ActiveLink'
+import Link from 'next/link'
 import menu from './header-list';
 import { toggleModal } from '../../store/actions/app.actions';
 
