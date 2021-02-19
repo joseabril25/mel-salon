@@ -37,14 +37,14 @@ const MyApp = ({ Component, pageProps }) => {
   return (
     <>
       <DefaultSeo
-        title="StartP - React Next IT Startups & Digital Services Template"
-        description="StartP is a React and Bootstrap 4 based Professional website template. This has been built with React, ES6+ and as framework Next.js and Express.js."
+        title="Yehey! Your Everday Giveaway!"
+        description="Everyday's a reason to share and shout YEHEY! Exciting Prices and giveaways await you, as you review and as you play!"
         openGraph={{
           type: "website",
           locale: "en_IE",
-          url: "https://startp-react.envytheme.com/",
+          url: "",
           site_name:
-            "StartP - React Next IT Startups & Digital Services Template"
+            "Yehey! Your Everday Giveaway!"
         }}
       />
         <Component {...pageProps} />
