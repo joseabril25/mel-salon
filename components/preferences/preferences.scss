@@ -49,9 +49,15 @@
     }
 }
 
-.registration-form {
+.registration-form-preferences {
     text-align: center;
-    margin: 5% 0%;
+    padding: 3% 3%;
+    background-color: #ffffff;
+    border-radius: 15px;
+    border: 5px solid $light-green;
+    .row {
+        text-align: center;
+    }
     input {
         text-align: center;
         border: 3px solid $light-blue-color;
@@ -64,6 +70,10 @@
         width: 100%;
         color: $paragraph-color;
     }
+    .custom-chekbox {
+        border: 2px solid $orange-color;
+    }
+
     select {
         text-align: center;
         border: 3px solid $light-blue-color;
@@ -110,5 +120,28 @@
             background-color: $orange-color;
             color: $white-color;
         }
+    }
+}
+
+.preference-buttons {
+    background: $orange-gradient;
+    color: $white-color;
+    font-size: 20px;
+    border: none;
+    border-radius: 20px;
+    height: 55px;
+    padding: 0 20px;
+    position: relative;
+    top: -3px;
+    cursor: pointer;
+    outline: 0;
+    -webkit-transition: $transition;
+    transition: $transition;
+    width: 15%;
+    float:right;
+    margin-top: 20px;
+    &:hover, &:focus {
+        background-color: $orange-color;
+        color: $white-color;
     }
 }

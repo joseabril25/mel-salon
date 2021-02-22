@@ -22,6 +22,7 @@ import '../components/play-fail/play-fail.scss'
 import '../components/play-success/play-success.scss'
 import '../components/basic/basic.scss'
 import '../components/basic-second/basic-second.scss'
+import '../components/preferences/preferences.scss'
 // If you want to change the theme color you should comment out above line and uncomment the below line and change the color names from list
 /*
 * brink-pink-style.css
