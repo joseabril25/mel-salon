@@ -1,0 +1,115 @@
+@import "../../static/styles/global-variables.scss";
+
+.play-success-title {
+    color: $paragraph-color;
+    font-weight: 900;
+    text-shadow: 0px 2px 15px $white-color;
+}
+
+.contact-container {
+    // display:flex;
+    text-align: center;
+}
+
+.contact-form_group {
+    text-align: center;
+    margin-bottom: $margin - 4;
+  
+    &-error {
+      margin-bottom: $margin_sm + 2;
+      color: $error;
+      font-size: $size-small;
+    }
+}
+
+.contact-fb-login {
+    background: $white-color;
+    color: $light-blue-color;
+    font-size: 16px;
+    border: none;
+    border-radius: 20px;
+    height: 55px;
+    padding: 15px 20px;
+    position: relative;
+    top: -3px;
+    cursor: pointer;
+    outline: 0;
+    -webkit-transition: $transition;
+    transition: $transition;
+    width: 70%;
+
+    &:hover, &:focus {
+        background-color: $light-blue-color;
+        color: $white-color;
+    }
+}
+.divider-row {
+    margin: 20px 0px;
+    .divider {
+        color: $white-color;
+    }
+}
+
+.email-image {
+    width:150px;
+}
+
+.play-fail-buttons{
+    margin-top: 10px;
+}
+
+.button-label {
+    color: $white-color;
+}
+
+.fail-fb-login {
+    background: $white-color;
+    color: $light-blue-color;
+    font-size: 16px;
+    border: none;
+    border-radius: 20px;
+    height:65px;
+    padding: 15px 15px;
+    position: relative;
+    top: -3px;
+    cursor: pointer;
+    outline: 0;
+    -webkit-transition: $transition;
+    transition: $transition;
+    width: 100%;
+
+    &:hover, &:focus {
+        background-color: $light-blue-color;
+        color: $white-color;
+    }
+}
+
+.fail-fb-login-2 {
+    background: $white-color;
+    color: $light-blue-color;
+    font-size: 16px;
+    border: none;
+    border-radius: 20px;
+    height:65px;
+    padding: 0px 15px;
+    position: relative;
+    top: -3px;
+    cursor: pointer;
+    outline: 0;
+    -webkit-transition: $transition;
+    transition: $transition;
+    width: 100%;
+
+    &:hover, &:focus {
+        background-color: $light-blue-color;
+        color: $white-color;
+    }
+}
+
+.fail-img {
+    width: 100px;
+}
+
+.success-yehey-img {
+    width: 100px;
+}

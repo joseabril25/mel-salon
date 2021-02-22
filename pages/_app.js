@@ -18,6 +18,10 @@ import '../components/apply-finish/apply-finish.scss'
 import '../components/apply/apply.scss'
 import '../components/play/play.scss'
 import '../components/wheel/wheel.scss'
+import '../components/play-fail/play-fail.scss'
+import '../components/play-success/play-success.scss'
+import '../components/basic/basic.scss'
+import '../components/basic-second/basic-second.scss'
 // If you want to change the theme color you should comment out above line and uncomment the below line and change the color names from list
 /*
 * brink-pink-style.css

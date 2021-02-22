@@ -5,7 +5,7 @@ import Apply from '../components/apply';
 import ApplyConfirm from '../components/apply-confirm';
 import ApplyFinish from '../components/apply-finish';
 import { toggleApplyPages } from '../store/actions/apply.actions';
-const Home = ({ }) => {
+const ApplyForTest = ({ }) => {
     const applyPage = useSelector(({ apply }) => apply.applyPage);
 
     const Content = () => {
@@ -20,6 +20,7 @@ const Home = ({ }) => {
                 break;
         }
     }
+
     return (
         <MainContainer>
             <Content />
@@ -27,4 +28,4 @@ const Home = ({ }) => {
     )
 }
 
-export default Home;
+export default ApplyForTest;
