@@ -5,6 +5,8 @@ import BasicSecond from '../components/basic-second';
 import MainContainer from '../components/container';
 import Location from '../components/location';
 import Preferences from '../components/preferences';
+import PreferencesSecond from '../components/preferences-second';
+import PreferencesThird from '../components/preferences-third';
 
 const Registration = () => {
     const registerPage = useSelector(({ register }) => register.registerPage);
@@ -19,6 +21,10 @@ const Registration = () => {
                 return <Location />
             case 4: 
                 return <Preferences />
+            case 5: 
+                return <PreferencesSecond />
+            case 6: 
+                return <PreferencesThird />
             default:
                 break;
         }
@@ -37,7 +43,7 @@ const Registration = () => {
                                     <h2 className={registerPage === 3 ? 'with-background' : ''}>Location</h2>
                             </div>
                             <div className="col-lg-4 col-md-12 register-title">
-                                    <h2 className={registerPage === 4 || registerPage === 5 || registerPage === 6 ? 'with-background' : ''}>Preferences</h2>
+                                    <h2 className={registerPage === 4 || registerPage === 5 || registerPage === 6 || registerPage === 7 ? 'with-background' : ''}>Preferences</h2>
                             </div>
                         </div>
                     </div>

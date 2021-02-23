@@ -2,9 +2,9 @@ import React from 'react';
 import { useForm } from 'react-hook-form';
 import { useDispatch } from 'react-redux';
 import { toggleApplyPages } from '../../store/actions/register.actions';
-import fields, { defaultValues } from './preferences-form.fields'
+import fields, { defaultValues } from './preferences-third-form.fields'
 
-const Preferences = () => {
+const PreferencesThird = () => {
     const dispatch = useDispatch();
     const { register, handleSubmit, errors, reset } = useForm();
 
@@ -58,4 +58,4 @@ const Preferences = () => {
   );
 }
 
-export default Preferences;
+export default PreferencesThird;

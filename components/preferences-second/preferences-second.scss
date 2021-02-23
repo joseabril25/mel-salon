@@ -81,7 +81,7 @@
         border: 3px solid $orange-color;
     }
 
-    input[type=radio], input[type=checkbox] {
+    input[type=radio] {
         position: absolute;
         opacity: 0;
         cursor: pointer;
@@ -105,12 +105,12 @@
         text-align: left;
     }
 
-    .label-container:hover input[type=radio] + .checkmark, .label-container:hover input[type=checkbox] + .checkmark {
+    .label-container:hover input[type=radio] + .checkmark {
         background-color: #ccc;
     }
       
     /* When the checkbox is checked, add a background */
-    .label-container input[type=radio]:checked + .checkmark, .label-container input[type=checkbox]:checked + .checkmark {
+    .label-container input[type=radio]:checked + .checkmark {
         background-color: $orange-color;
         color: $white-color;
     }
@@ -123,7 +123,7 @@
     }
     
     /* Show the checkmark when checked */
-    .label-container input[type=radio]:checked + .checkmark:after, .label-container input[type=checkbox]:checked + .checkmark:after {
+    .label-container input[type=radio]:checked + .checkmark:after {
         display: block;
     }
     
