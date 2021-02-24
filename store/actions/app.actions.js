@@ -7,3 +7,17 @@ export const toggleModal = (payload) => {
       payload,
     };
 };
+
+export const toggleSpin = (payload) => {
+    return {
+      type: appTypes.APP_TOGGLE_SPIN,
+      payload,
+    };
+};
+
+export const setSpinResult = (payload) => {
+    return {
+      type: appTypes.APP_SET_SPIN_RESULT,
+      payload,
+    };
+};

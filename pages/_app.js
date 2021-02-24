@@ -24,6 +24,7 @@ import '../components/basic/basic.scss'
 import '../components/basic-second/basic-second.scss'
 import '../components/preferences/preferences.scss'
 import '../components/preferences-fourth/preferences-fourth.scss'
+import '../components/new-wheel/new-wheel.scss'
 // If you want to change the theme color you should comment out above line and uncomment the below line and change the color names from list
 /*
 * brink-pink-style.css

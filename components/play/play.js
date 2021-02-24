@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Link from 'next/link'
 import Partner from '../partner';
 import Wheel from '../wheel';
+import NewWheel from '../new-wheel/';
 
 const data = [
     { option: '0', style: { backgroundColor: 'green', textColor: 'black' } },
@@ -20,14 +21,14 @@ const Play = () => {
                             <div className="ml-banner-content">
                                 <img src={require("../../static/images/play-images/lucky-wheel.png")} className="wow fadeInUp lucky-image" data-wow-delay="0.5s" alt="image" />
                             </div>
-                            <Link href="#">
-                                <a className="btn btn-secondary play-button">Spin</a>
-                            </Link>
+                            {/* <Link href="#">
+                                <a className="btn btn-secondary play-button" onClick{}>Spin</a>
+                            </Link> */}
                         </div>
 
                         <div className="col-lg-4 col-md-12">
                             <div className="ml-banner-single-image">
-                                <Wheel />
+                                <NewWheel />
                             </div>
                         </div>
                         <div className="col-lg-4 col-md-12">

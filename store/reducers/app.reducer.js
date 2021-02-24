@@ -3,6 +3,8 @@ import { appTypes } from "../types";
 const initialState = {
   isModalOpen: false,
   modalType: null,
+  isSpinning: false,
+  spinResult: null,
 };
 
 const appReducer = (state = initialState, action) => {
@@ -16,6 +18,16 @@ const appReducer = (state = initialState, action) => {
       return {
         ...state,
         modalType: action.payload,
+      };
+    case appTypes.APP_SET_SPINNING:
+      return {
+        ...state,
+        isSpinning: action.payload,
+      };
+    case appTypes.APP_SET_RESULT:
+      return {
+        ...state,
+        spinResult: action.payload,
       };
     default: {
       return state;

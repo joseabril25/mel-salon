@@ -10,8 +10,17 @@ function* toggleModal({payload}) {
     ])
 }
 
+function* toggleSpin({payload}) {
+    yield put({ type: appTypes.APP_SET_SPINNING, payload});
+}
+
+function* setSpinResult({payload}) {
+    yield put({ type: appTypes.APP_SET_RESULT, payload});
+}
+
 // Generator: Watch Counter
 export function* appWatcher() {
     yield takeLatest(appTypes.APP_TOGGLE_MODAL, toggleModal);
+    yield takeLatest(appTypes.APP_SET_SPIN_RESULT, setSpinResult);
   }
   
