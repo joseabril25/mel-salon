@@ -5,6 +5,7 @@ import BasicSecond from '../components/basic-second';
 import MainContainer from '../components/container';
 import Location from '../components/location';
 import Preferences from '../components/preferences';
+import PreferencesFourth from '../components/preferences-fourth';
 import PreferencesSecond from '../components/preferences-second';
 import PreferencesThird from '../components/preferences-third';
 
@@ -25,6 +26,8 @@ const Registration = () => {
                 return <PreferencesSecond />
             case 6: 
                 return <PreferencesThird />
+            case 7: 
+                return <PreferencesFourth />
             default:
                 break;
         }

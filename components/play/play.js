@@ -3,6 +3,12 @@ import Link from 'next/link'
 import Partner from '../partner';
 import Wheel from '../wheel';
 
+const data = [
+    { option: '0', style: { backgroundColor: 'green', textColor: 'black' } },
+    { option: '1', style: { backgroundColor: 'white' } },
+    { option: '2' },
+]
+
 const Play = () => {
 
     return (

@@ -1,7 +1,7 @@
 import { registerTypes } from "../types";
 
 const initialState = {
-  registerPage: 6,
+  registerPage: 7,
 };
 
 const registerReducer = (state = initialState, action) => {
