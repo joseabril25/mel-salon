@@ -12,8 +12,8 @@ const ApplyConfirm = ({ }) => {
             <div className="appcon-banner">
                 <div className="container-fluid appcon-title-container">
                     <div className="row align-items-center">
-                        <div className="col-lg-12 col-md-12 appcon-title">
-                            <h1>If I'm Selected to participate in the testing of this product, I agree to the following responsibilities that will entail:</h1>
+                        <div className="col-lg-12 col-md-12 section-title">
+                            <h2 className="text-white">If I'm Selected to participate in the testing of this product, I agree to the following responsibilities that will entail:</h2>
                             <ul>
                                 {
                                     list.map(l =>

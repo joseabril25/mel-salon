@@ -160,9 +160,9 @@ const NewWheel = () => {
 
   return (
     <div className="App">
-      <span id="selector">&#9660;</span>
       <canvas
         id="wheel"
+        className="new-wheel"
         width="500"
         height="500"
         style={{
@@ -172,6 +172,7 @@ const NewWheel = () => {
           }s ease-out`
         }}
       />
+      <span id="selector">&#9664;</span>
 
       {spinning ? (
         <button className="btn btn-secondary play-button" type="button" id="reset" onClick={reset}>

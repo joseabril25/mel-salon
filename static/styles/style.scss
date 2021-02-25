@@ -75,6 +75,11 @@ $font-size: 14px;
 $blue-gradient: linear-gradient(180deg, rgba(0,186,162,1) 0%, rgba(0,168,162,1) 100%); 
 $light-green: #00baa2;
 
+
+.text-white {
+    color: $white-color;
+}
+
 .logo-img {
     cursor: pointer;
 }
@@ -156,9 +161,9 @@ p {
 }
 .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
     color: $heading-color;
-    font-weight: 500;
     text-transform: uppercase;
 }
+
 .ptb-80 {
     padding: {
         top: 80px;
@@ -406,7 +411,7 @@ label {
         margin-bottom: 0;
         text-transform: capitalize;
         font: {
-            size: 24px;
+            size: 35px;
             weight: 600;
         };
     }
@@ -5390,7 +5395,7 @@ Repair About CSS
 .about-row {
     justify-content: center;
     .section-title {
-        padding: 0px 60px;
+        padding: 0px 5%;
     }
 }
 
@@ -6752,7 +6757,6 @@ Suggest CSS
     background-image: url('../images/suggest-images/suggeset-bg.png');
     background-repeat: no-repeat;
     background-size: cover;
-    height: 80vh;
 }
 .suggest-title-container {
     background-image: $orange-gradient;
@@ -6829,9 +6833,17 @@ Our Solutions CSS
 .solutions-area {
     padding: 8% 0%;
     position: relative;
-    z-index: 5;
-    height: 100vh;
+    // z-index: 5;
+    // height: 100vh;
 }
+
+// .solutions-container {
+//     width: 100%;
+//     padding-right: 15px;
+//     padding-left: 15px;
+//     margin-right: auto;
+//     margin-left: auto;
+// }
 
 .solutions-boxes {
     padding-left: 0px !important;
@@ -7173,6 +7185,7 @@ Branding CSS
 .branding-box-area {
     display: flex;
     justify-content: space-between;
+    margin-top:2%;
 }
 
 .branding-button {
@@ -7726,7 +7739,9 @@ ML Projects Area CSS
         h2 {
             max-width: 470px;
             line-height: 1.3;
+            font-size: 35px;
         }
+
         .bar {
             margin: {
                 left: 0;

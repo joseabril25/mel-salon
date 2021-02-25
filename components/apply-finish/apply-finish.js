@@ -8,7 +8,7 @@ const ApplyFinish = () => {
                 <div className="container-fluid apply-title-container">
                     <div className="row align-items-center">
                         <div className="col-lg-12 col-md-12 apply-finish-title">
-                                <h1>Thank you for applying to test our new yehey! featured product!</h1>
+                                <h2 className="text-white">Thank you for applying to test our new yehey! featured product!</h2>
                                 <h3>We will send you a quick notification if you meet our requirements to test this product!</h3>
                         </div>
                     </div>

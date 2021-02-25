@@ -3,13 +3,14 @@ import Link from 'next/link'
 
 const Game = () => {
     return (
-        <section className="features-area">
-            <div className="container">
+        <section className="solutions-area">
+            <div className="solutions-container">
                 <div className="row features-row">
-                    
-                    <div className="section-title">
-                        <h1>Win Exciting Prices! Try Out Our Latest Products! </h1>
-                        <h1>Get Freebies & Giveaways That Will Make You Go Yehey!  </h1>
+                    <div className="col-lg-12 col-sm-12 col-md-12">
+                        <div className="section-title">
+                            <h2>Win Exciting Prices! Try Out Our Latest Products! </h2>
+                            <h2>Get Freebies & Giveaways That Will Make You Go Yehey!  </h2>
+                        </div>
                     </div>
                 </div>
 

@@ -7,11 +7,13 @@ const About = () => {
         <section className="solutions-area">
             <div className="solutions-container">
                 <div className="row about-row">
-                    <div className="section-title">
-                        <h1>Yehey! values the organic, unfiltered opinion of our consumers towards our products. </h1>
-                        <h1>In our online sampling community, what you think, matters!  </h1>
-                        <h1>If our product makes you go Yehey! </h1>
-                        <h1>It makes us go Hurray! </h1>
+                    <div className="col-lg-12 col-sm-12 col-md-12">
+                        <div className="ml-banner-content section-title">
+                            <h2>Yehey! values the organic, unfiltered opinion of our consumers towards our products. </h2>
+                            <h2>In our online sampling community, what you think, matters!  </h2>
+                            <h2>If our product makes you go Yehey! </h2>
+                            <h2>It makes us go Hurray! </h2>
+                        </div>
                     </div>
                 </div>
 

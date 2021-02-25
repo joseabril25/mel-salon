@@ -1,3 +1,4 @@
+@import "../styles/global-variables.scss";
 $media: screen;
 $feature_min: min-width;
 $feature_max: max-width;
@@ -15,18 +16,112 @@ $value_six: 1550px;
         font-size: 13px;
         padding: 13px 33px;
     }
+    .branding-button-title {
+        max-width: 100%;
+    }
+
+    .single-branding-box-0 {
+        min-height:100%;
+        padding: 20px 15px;
+        width: 100%;
+        &::before{
+            border-radius: 0px;
+        }
+
+        .side-image {
+            display: none;
+        }
+    }
+
+    .single-branding-box-1 {
+        margin-top: 2%;
+        min-height:100%;
+        padding: 30px 15px;
+        width: 100%;
+        &::before{
+            border-radius: 0px;
+        }
+
+        .side-image {
+            display: none;
+        }
+    }
+
+    .appcon-header-head {
+        padding-top: 35%;
+        background-image: none;
+
+        .appcon-banner {
+            .container-fluid {
+                padding: 5% 0%;
+
+                .section-title ul {
+                    text-align: left;
+                    padding-left: 5px;
+                    margin-top:10px;
+
+                    h5 {
+
+                    }
+                }
+            }
+        }
+
+        .blue-submit {
+            width: 60%;
+        }
+    }
+
+    .apply-header-head {
+        padding-top: 35%;
+        .applyion-banner {
+            padding: 10% 0%;
+        }
+
+        .apply-title-container {
+            border-radius: 0;
+            margin-bottom: 5%;
+        }
+    }
+
+    .suggest-header-head {
+        padding-top: 35%;
+        background-image: none;
+
+        .suggestion-banner {
+            .container-fluid {
+                padding: 30px 0;
+            }
+        }
+
+        .blue-submit {
+            width: 60%;
+        }
+    }
+
+    .modal-body {
+        max-width: 100%;
+        padding: 0;
+    }
+    
     .ptb-80 {
         padding: {
             top: 50px;
             bottom: 50px;
         };
+
+        
     }
     .section-title {
-        margin-bottom: 40px;
+        margin-bottom: 0px;
 
         h2 {
-            font-size: 20px;
+            font-size: 25px;
         }
+    }
+
+    .contact-container {
+        padding: 0px;
     }
     .owl-theme {
         .owl-dots {
@@ -61,7 +156,7 @@ $value_six: 1550px;
                 overflow-y: scroll;
                 height: 400px;
                 display: block;
-                background-color: #fff;
+                background-image: $blue-gradient;
                 margin-top: 15px;
 
                 .nav-item {
@@ -305,7 +400,7 @@ $value_six: 1550px;
     }
 
     .features-area {
-        padding-bottom: 20px;
+        padding-bottom: 5% 0%;
     }
     .single-features {
         padding-left: 20px;
@@ -800,11 +895,7 @@ $value_six: 1550px;
     }
 
     .coming-soon-area {
-        height: 100%;
-        padding: {
-            top: 170px;
-            bottom: 170px;
-        };
+        padding: 8% 5% 0% 5%;
         .social-list {
             bottom: 20px;
         }
@@ -1163,6 +1254,24 @@ $value_six: 1550px;
 
     .footer-area {
         padding-top: 50px;
+
+        .footer-second-section {
+            margin-top: 8%;
+        }
+
+        .logo, .social-links {
+            text-align: center;
+
+            .sub-logo {
+                width: 150px;
+            }
+        }
+
+        .menu-links {
+            text-align: center;
+        }
+
+        
     }
     .single-footer-widget {
         padding: 0 !important;

@@ -8,11 +8,12 @@ apply CSS
     // background-image: url('../images/suggest-images/suggeset-bg.png');
     background-repeat: no-repeat;
     background-size: cover;
-    height: 80vh;
+    // height: 80vh;
+    padding: 8% 0%;
 }
 .apply-title-container {
     background-image: $orange-gradient;
-    padding: 30px 0px;
+    padding: 20px 0px;
     border-radius: 25px;
 
     .apply-title {

@@ -8,7 +8,7 @@ const Suggest = () => {
                 <div className="container-fluid suggest-title-container">
                     <div className="row align-items-center">
                         <div className="col-lg-12 col-md-12 suggest-title">
-                                <h1>Suggest a Product You Want Tested</h1>
+                                <h2 className="text-white">Suggest a Product You Want Tested</h2>
                         </div>
                     </div>
                 </div>

@@ -14,7 +14,7 @@ const ApplyForm = ({  }) => {
   }
 
   const renderFields = fields.map((field) => (
-    <div key={field.id} className="col-lg-12 col-md-6">
+    <div key={field.id} className="col-lg-12 col-md-12">
       <div className='contact-form_group '>
         <input
           className={errors[field.name] && 'input-error'}
@@ -34,7 +34,7 @@ const ApplyForm = ({  }) => {
     <div className='container contact-container'>
         <form className='apply-form' onSubmit={handleSubmit(handleOnSubmit)}>
             <div className="row">
-                    <div className="col-lg-12 col-md-6">
+                    <div className="col-lg-12 col-md-12">
                         <div className='contact-form_group'>
                         <textarea
                             ref={register({ required: false })}
@@ -45,7 +45,7 @@ const ApplyForm = ({  }) => {
                     {renderFields}
             </div>
             <div className="row">
-                <div className="col-lg-12 col-md-6">
+                <div className="col-lg-12 col-md-12">
                     <button type="submit">
                         {/* {isLoading && <div className={styles.spinner} />} */}
                         Next

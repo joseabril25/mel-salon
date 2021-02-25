@@ -10,19 +10,19 @@ const Footer = () => {
         <footer className="footer-area">
             <div >
                 <div className="row footer-first-section">
-                    <div className="col-lg-3 col-md-6 footer-logo">
+                    <div className="col-lg-3 col-md-6 col-sm-12 footer-logo">
                         <div className="single-footer-widget">
                             <div className="logo">
                                 <Link href="#">
                                     <a>
-                                        <img src={require("../../static/images/footer/yehey-logo.png")} alt="logo" />
+                                        <img src={require("../../static/images/header-images/logo.png")} alt="logo" />
                                     </a>
                                 </Link>
                             </div>
                         </div>
                     </div>
 
-                    <div className="col-lg-3 col-md-6 footer-social">
+                    <div className="col-lg-3 col-md-6 col-sm-12 footer-social">
                         <div className="single-footer-widget single-footer-widget-social">
                             <ul className="social-links">
                                 <li>
@@ -52,7 +52,7 @@ const Footer = () => {
                             <div className="logo">
                                 <Link href="#">
                                     <a>
-                                        <img src={require("../../static/images/footer/tgc-logo.png")} alt="logo" />
+                                        <img src={require("../../static/images/footer/tgc-logo.png")} alt="logo" className="sub-logo" />
                                     </a>
                                 </Link>
                             </div>
@@ -64,7 +64,7 @@ const Footer = () => {
                             <div className="logo">
                                 <Link href="#">
                                     <a>
-                                        <img src={require("../../static/images/footer/hey-logo.png")} alt="logo" />
+                                        <img src={require("../../static/images/footer/hey-logo.png")} alt="logo" className="sub-logo" />
                                     </a>
                                 </Link>
                             </div>

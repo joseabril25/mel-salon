@@ -32,7 +32,7 @@ import '../components/new-wheel/new-wheel.scss'
 * purple-style.css
 */
 // import '../static/styles/brink-pink-style.css'
-import '../static/css/responsive.css'
+import '../static/css/responsive.scss'
 
 import { DefaultSeo } from "next-seo";
 import React from 'react';
