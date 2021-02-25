@@ -9,18 +9,18 @@ const PreferencesFourth = () => {
     const { register, handleSubmit, errors, reset } = useForm();
 
     const onSubmit = () => {
-        dispatch(toggleApplyPages(2))
+        dispatch(toggleApplyPages(8))
     }
 
     const renderFields = fields.map((field) => (
       <div key={field.id} className="col-lg-12 col-md-6">
         <div className='contact-form_group '>
-          <div className='preferences-fourth row'>
+          {/* <div className='preferences-fourth row'> */}
             <h3>{field.placeholder}</h3>
-          </div>
+          {/* </div> */}
           <div className="row preferences-choices">
             {field.options.map(option => 
-              <div className="col-lg-4 col-md-6">
+              <div className="col-lg-4 col-md-12">
                 <label htmlFor="message" className="label-container">{option}
                   <input
                     className={errors[field.name] && 'input-error'}
@@ -42,14 +42,14 @@ const PreferencesFourth = () => {
     ));
     
     return (
-        <div className='container register-container'>
-          <form className='registration-form-preferences-fourth' onSubmit={handleSubmit(onSubmit)}>
+        <div className='register-container'>
+          <form className='registration-form-preferences' onSubmit={handleSubmit(onSubmit)}>
             <div className="row">
                 {renderFields}
             </div>
           </form>
           <div className="row">
-            <div className="col-lg-12 col-md-6">
+            <div className="col-lg-12 col-md-12 text-center">
                 <button type="submit" className="preference-buttons">
                     {/* {isLoading && <div className={styles.spinner} />} */}
                     Next

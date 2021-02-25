@@ -182,6 +182,10 @@ p {
 .bg-0f054b {
     background-color: $bg-color4;
 }
+
+.text-center {
+    text-align: center;
+}
 /* owl carousel btn */
 .owl-theme {
     .owl-nav {
@@ -1917,6 +1921,10 @@ Services Details CSS
 /*================================================
 Features CSS
 =================================================*/
+
+.boxes-row {
+    padding: 0 10%;
+}
 
 .features-row{
     justify-content: center;
@@ -6803,7 +6811,7 @@ Registration CSS
         text-align: center;
 
         h1 {
-            color: $white-color;
+            color: $light-blue-color;
         }
     }
 }

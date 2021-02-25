@@ -5,7 +5,7 @@ const ContactUs = () => {
     return (
         <div className='container contact-container'>
             <img src={require("../../static/images/modal-images/email-icon.png")} className="wow fadeInUp email-image" data-wow-delay="0.5s" alt="image" />
-            <h1 className='signin-title'>DO YOU HAVE A YEHEY! MESSAGE FOR US?</h1>
+            <h2 className='signin-title'>DO YOU HAVE A YEHEY! MESSAGE FOR US?</h2>
             <div className="row contact-buttons">
                 <div className="col-lg-12 col-md-6">
                     <h5 className="button-label">EMAIL US</h5>

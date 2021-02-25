@@ -14,7 +14,7 @@ const Game = () => {
                     </div>
                 </div>
 
-                <div className="row">
+                <div className="row boxes-row">
                     <div className="col-lg-6 col-md-6">
                         <div className="single-features">
                             <img src={require("../../static/images/game/products.png")} className="wow fadeInUp game-image" data-wow-delay="0.5s" alt="image" />

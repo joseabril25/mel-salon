@@ -20,6 +20,10 @@ $value_six: 1550px;
         max-width: 100%;
     }
 
+    .boxes-row {
+        padding: 5% 0%;
+    }
+
     .single-branding-box-0 {
         min-height:100%;
         padding: 20px 15px;
@@ -99,6 +103,31 @@ $value_six: 1550px;
         }
     }
 
+    .register-header-head {
+        padding-top: 35%;
+        .register-banner {
+            .container-fluid {
+                padding: 10px 10px;
+            }
+        }
+
+        .with-background {
+            width: 100%;
+        }
+
+        .registration-form {
+            button {
+                width: 50%;
+                float:none;
+            }
+        } 
+
+        .preference-buttons {
+            width: 50%;
+            float:none;
+        }
+    }
+
     .modal-body {
         max-width: 100%;
         padding: 0;
@@ -118,10 +147,24 @@ $value_six: 1550px;
         h2 {
             font-size: 25px;
         }
+
+        img {
+            text-align: center;
+        }
+    }
+
+    .email-image {
+        width: 80px;
     }
 
     .contact-container {
-        padding: 0px;
+        padding: 40px 0px;
+
+        .contact-fb-login {
+            flex-direction: row;
+            display: inline-flex;
+            width: 100%;
+        }
     }
     .owl-theme {
         .owl-dots {

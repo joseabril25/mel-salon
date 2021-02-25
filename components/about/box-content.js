@@ -15,13 +15,13 @@ const boxContent = [
         id: '2',
         class: '',
         buttonText: 'Fill-Out The Surveys To Earn Badges & Get Our Product Samples First!',
-        link: ''
+        link: 'coming-soon'
     },
     {
         id: '3',
         class: '',
         buttonText: 'Be a Part of A Loving Yehey! Online Community!',
-        link: ''
+        link: 'coming-soon'
     },
 ]
 

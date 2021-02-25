@@ -1,19 +1,19 @@
 const fields = [
   {
     id: 0,
-    type: 'radio',
-    label: 'Purchasing*',
-    name: 'purchasing',
+    type: 'checkbox',
+    label: 'Familiarity*',
+    name: 'familiarity',
     placeholder: "Which of these factors are important to you when you make a decision about purchasing a certain brand?",
     options: [
-      'Under ₱10,000',
-      '₱10,000 - ₱29,999',
-      '₱30,000 - ₱69,999',
-      '₱70,000 - ₱139,999',
-      '₱140,000 - ₱249,999',
-      '₱250,000 - ₱499,999',
-      'More than ₱500,000',
-      'I prefer not to answer'],
+      'Familiarity With The Brand',
+      'Price',
+      'Comfort',
+      'Materials',
+      'Customer Service',
+      'Convenience',
+      'Durability',
+      'Others'],
     validation: {
       required: {
         value: true,
@@ -23,7 +23,7 @@ const fields = [
   },
 ]
 export const defaultValues = {
-  purchasing: '',
+  familiarity: '',
 };
 
 export default fields;

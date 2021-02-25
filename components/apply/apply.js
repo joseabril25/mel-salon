@@ -9,8 +9,8 @@ const Apply = ({ }) => {
             <div className="applyion-banner">
                 <div className="container-fluid apply-title-container">
                     <div className="row align-items-center">
-                        <div className="col-lg-12 col-md-12 section-title">
-                                <h2 className="text-white">Confirm or Update Your Contact Number & Delivery Address Below</h2>
+                        <div className="col-lg-12 col-md-12 section-title title-align">
+                            <h2 className="text-white">Confirm or Update Your Contact Number & Delivery Address Below</h2>
                         </div>
                     </div>
                 </div>

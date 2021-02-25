@@ -9,7 +9,7 @@ const Preferences = () => {
     const { register, handleSubmit, errors, reset } = useForm();
 
     const onSubmit = () => {
-        dispatch(toggleApplyPages(2))
+        dispatch(toggleApplyPages(5))
     }
 
     const renderFields = fields.map((field) => (
@@ -40,14 +40,14 @@ const Preferences = () => {
     ));
     
     return (
-        <div className='container register-container'>
+        <div className='register-container'>
           <form className='registration-form-preferences' onSubmit={handleSubmit(onSubmit)}>
             <div className="row">
                 {renderFields}
             </div>
           </form>
           <div className="row">
-            <div className="col-lg-12 col-md-6">
+            <div className="col-lg-12 col-md-6 text-center">
                 <button type="submit" className="preference-buttons">
                     {/* {isLoading && <div className={styles.spinner} />} */}
                     Next
