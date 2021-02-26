@@ -1,14 +1,20 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
-import { connect } from 'react-redux';
+import { connect, useDispatch, useSelector } from 'react-redux';
 import Link from 'next/link'
 import fields, { defaultValues } from './sign-in.fields'
+import { authLogin } from '../../store/actions/auth.actions';
 
 const SignIn = ({ isLoading }) => {
-const { register, handleSubmit, errors, reset } = useForm();
+    const dispatch = useDispatch();
+    const loginError = useSelector(({ auth }) => auth.loginError);
+    const { register, handleSubmit, errors, reset } = useForm({
+        mode: 'onSubmit',
+        defaultValues: defaultValues
+    });
 
-    const onSubmit = () => {
-
+    const onSubmit = (data) => {
+        dispatch(authLogin(data));
     }
 
     const renderFields = fields.map((field) => (
@@ -32,8 +38,9 @@ const { register, handleSubmit, errors, reset } = useForm();
         <div className='container contact-container'>
             <img src={require("../../static/images/header-images/logo-2.png")} className="login-logo" data-wow-delay="0.5s" alt="image" />
             <form onSubmit={handleSubmit(onSubmit)}>
-                <div className="row">
-                        {renderFields}
+                <div className="row text-center">
+                    {renderFields}
+                    {loginError ? <span className='contact-form_group-error'>{loginError}</span> : <></>}
                 </div>
                 <div className="row">
                     <div className="col-lg-12 col-md-6">
@@ -61,7 +68,7 @@ const { register, handleSubmit, errors, reset } = useForm();
                 <div className="col-lg-12 col-md-6">
                     <h5 className='divider'>Don't have an account yet? 
                         <Link href="/registration">
-                                <a >  Sign Up For Free</a>
+                                <a > Sign Up For Free</a>
                         </Link>
                     </h5>
                     
@@ -71,4 +78,4 @@ const { register, handleSubmit, errors, reset } = useForm();
   );
 }
 
-export default connect(null)(SignIn);
+export default SignIn;

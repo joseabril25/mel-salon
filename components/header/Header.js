@@ -4,11 +4,13 @@ import { connect } from 'react-redux'
 import Link from 'next/link'
 import menu from './header-list';
 import { toggleModal } from '../../store/actions/app.actions';
+import { authLogout } from '../../store/actions/auth.actions';
 
 class Header extends React.Component {
 
     state = {
         collapsed: true,
+        isUser: this.props.user
     };
 
     toggleNavbar = () => {
@@ -28,20 +30,15 @@ class Header extends React.Component {
         });
         window.scrollTo(0, 0);
     }
+    
 
     render(){
         const { collapsed } = this.state;
         const classOne = collapsed ? 'collapse navbar-collapse' : 'collapse navbar-collapse show';
         const classTwo = collapsed ? 'navbar-toggler navbar-toggler-right collapsed' : 'navbar-toggler navbar-toggler-right';
-
-        let { pathname } = this.props.router;
-        let layOutCls = '';
-        if (pathname == '/home-three'){
-            layOutCls = 'p-relative';
-        }
         return (
             <header id="header" className="navbar-style-three">
-                <div id="navbar" className={`startp-nav ${layOutCls}`}>
+                <div id="navbar" className={`startp-nav`}>
                     <div className="container-fluid">
                         <nav className="navbar navbar-expand-md navbar-light">
                             <Link href="/">
@@ -65,17 +62,34 @@ class Header extends React.Component {
                                     {
                                         menu.map(m => 
                                             <li className="nav-item">
-                                            {
-                                                m.title === 'Login' ?
-                                                    <a className="nav-link" onClick={ () => this.props.handleToggleModal()}>{m.title}</a> :
-                                                    <Link activeClassName="active" href={`/${m.link}`}>
-                                                        <a className="nav-link">{m.title}</a>
-                                                    </Link>
-                                            }
+                                                <Link activeClassName="active" href={`/${m.link}`}>
+                                                    <a className="nav-link">{m.title}</a>
+                                                </Link>
                                             </li>
                                         )
                                     }
-                                    
+                                    {
+                                        this.props.isLoggedIn ? 
+                                        <>
+                                            {/* <li className="nav-item">
+                                                <a className="nav-link">Hello, {this.props.isUser.username}</a>
+                                            </li> */}
+                                            <li className="nav-item">
+                                                <a className="nav-link" onClick={ () => this.props.handleLogout()}>Logout</a>
+                                            </li>
+                                        </>
+                                        :
+                                        <>
+                                            <li className="nav-item">
+                                                <a className="nav-link" onClick={ () => this.props.handleToggleModal()}>Login</a>
+                                            </li>
+                                            <li className="nav-item">
+                                                <Link activeClassName="active" href='/registration'>
+                                                    <a className="nav-link">Join Yehey!</a>
+                                                </Link>
+                                            </li>
+                                        </>
+                                    }
                                 </ul>
                             </div>
     
@@ -88,15 +102,17 @@ class Header extends React.Component {
     }
 }
 
-const mapStateToProps = (state)=>{
+const mapStateToProps = ({ auth })=>{
     return{
-        products: state.addedItems
+        isLoggedIn: auth.isLoggedIn,
+        user: auth.user
     }
 }
 
 const mapDispatchToProps = dispatch => {
     return {
         handleToggleModal: () => dispatch(toggleModal({active: true, type: 'login'})),
+        handleLogout: () => dispatch(authLogout()),
     }
 }
 

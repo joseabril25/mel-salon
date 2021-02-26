@@ -37,11 +37,12 @@ import '../static/css/responsive.scss'
 import { DefaultSeo } from "next-seo";
 import React from 'react';
 import { wrapper } from '../store/store';
+import TokenChecker from '../components/token-checker/token-checker'
 
 const MyApp = ({ Component, pageProps }) => {
 
   return (
-    <>
+    <TokenChecker>
       <DefaultSeo
         title="Yehey! Your Everday Giveaway!"
         description="Everyday's a reason to share and shout YEHEY! Exciting Prices and giveaways await you, as you review and as you play!"
@@ -54,7 +55,7 @@ const MyApp = ({ Component, pageProps }) => {
         }}
       />
         <Component {...pageProps} />
-    </>
+    </TokenChecker>
   );
 }
 

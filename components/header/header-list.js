@@ -15,14 +15,6 @@ const menu = [
         title: 'Apply for Test',
         link: 'apply-for-test'
     },
-    {
-        title: 'Login',
-        link: ''
-    },
-    {
-        title: 'Join Yehey!',
-        link: 'registration'
-    },
 ]
 
 export default menu;

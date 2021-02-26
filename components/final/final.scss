@@ -14,9 +14,10 @@
     margin-bottom: $margin - 4;
   
     &-error {
-      margin-bottom: $margin_sm + 2;
       color: $error;
       font-size: $size-small;
+      margin:auto auto;
+      padding-bottom: 10px;
     }
 }
 
