@@ -47,13 +47,13 @@ function* authLogout(){
 
 function* authCheck() {
   const jwt = yield Cookies.get('yehey-jwt');
-
+  const user = yield Cookies.get('yehey-user');
+  console.log("🚀 ~ file: auth.saga.js ~ line 50 ~ function*authCheck ~ user", user)
   if(jwt){
-    const user = yield Cookies.get('yehey-user');
     yield all([
       put({ type: authTypes.AUT_SET_LOGGED, payload: true}),
       put({ type: authTypes.AUT_SET_APW, payload: jwt}),
-      put({ type: authTypes.AUT_SET_USER, payload: user}),
+      put({ type: authTypes.AUT_SET_USER, payload: JSON.parse(user)}),
     ])
   }
 }
