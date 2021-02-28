@@ -6,9 +6,14 @@ import fields, { defaultValues } from './preferences-second-form.fields'
 
 const PreferencesSecond = () => {
     const dispatch = useDispatch();
-    const { register, handleSubmit, errors, reset } = useForm();
+    const { register, handleSubmit, errors, reset } = useForm({
+      mode: 'onSubmit',
+      defaultValues
+    });
+    console.log("🚀 ~ file: preferences-second.js ~ line 10 ~ PreferencesSecond ~ errors", errors)
 
-    const onSubmit = () => {
+    const onSubmit = (data) => {
+    console.log("🚀 ~ file: preferences-second.js ~ line 16 ~ onSubmit ~ data", data)
         dispatch(toggleApplyPages(6))
     }
 
@@ -28,7 +33,7 @@ const PreferencesSecond = () => {
                     type={field.type}
                     placeholder={field.placeholder}
                   />
-                  <span class="checkmark"></span>
+                  <span className="checkmark"></span>
                 </label>
               </div>
               :
@@ -41,7 +46,7 @@ const PreferencesSecond = () => {
                     type={field.type}
                     placeholder={field.placeholder}
                   />
-                  <span class="checkmark"></span>
+                  <span className="checkmark"></span>
                 </label>
               </div>
             )}

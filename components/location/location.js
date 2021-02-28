@@ -6,7 +6,10 @@ import fields, { singleFields, tripleFields, doubleFields, defaultValues } from 
 
 const Location = () => {
   const dispatch = useDispatch();
-  const { register, handleSubmit, errors, reset } = useForm();
+  const { register, handleSubmit, errors, reset } = useForm({
+    mode: 'onSubmit',
+    defaultValues
+  });
 
   const onSubmit = () => {
     dispatch(toggleApplyPages(4))
@@ -81,30 +84,30 @@ const Location = () => {
   ))
 
   return (
-      <div className='container registrater-container'>
-          <form className='registration-form' onSubmit={handleSubmit(onSubmit)}>
-              <div className="row">
-                  {renderFields}
-              </div>
-              <div className="row">
-                  {renderTripleFields}
-              </div>
-              <div className="row">
-                  {renderSingleFields}
-              </div>
-              <div className="row">
-                  {renderDoubleFields}
-              </div>
-              <div className="row">
-                  <div className="col-lg-12 col-md-6">
-                      <button type="submit">
-                          {/* {isLoading && <div className={styles.spinner} />} */}
-                          Next
-                      </button>
-                  </div>
-              </div>
-          </form>
-      </div>
+    <div className='container registrater-container'>
+      <form className='registration-form' onSubmit={handleSubmit(onSubmit)}>
+        <div className="row">
+            {renderFields}
+        </div>
+        <div className="row">
+            {renderTripleFields}
+        </div>
+        {/* <div className="row">
+            {renderSingleFields}
+        </div>
+        <div className="row">
+            {renderDoubleFields}
+        </div> */}
+        <div className="row">
+            <div className="col-lg-12 col-md-6">
+              <button type="submit">
+                {/* {isLoading && <div className={styles.spinner} />} */}
+                Next
+              </button>
+            </div>
+        </div>
+        </form>
+    </div>
   );
 }
 

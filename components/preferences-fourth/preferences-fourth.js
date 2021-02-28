@@ -6,9 +6,12 @@ import fields, { defaultValues } from './preferences-fourth-form.fields'
 
 const PreferencesFourth = () => {
     const dispatch = useDispatch();
-    const { register, handleSubmit, errors, reset } = useForm();
+    const { register, handleSubmit, errors, reset } = useForm({
+      mode: 'onSubmit',
+      defaultValues
+    });
 
-    const onSubmit = () => {
+    const onSubmit = (data) => {
         dispatch(toggleApplyPages(8))
     }
 

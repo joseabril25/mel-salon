@@ -8,7 +8,7 @@ const fields = [
         validation: {
           required: {
             value: true,
-            message: 'Username Name is required',
+            message: 'Username is required',
           },
         },
     },
@@ -26,7 +26,7 @@ const fields = [
         },
     },
     {
-        id: 1,
+        id: 2,
         type: 'password',
         label: 'Password*',
         name: 'confirmPassword',
@@ -39,7 +39,7 @@ const fields = [
         },
     },
     {
-        id: 1,
+        id: 3,
         type: 'email',
         label: 'Email*',
         name: 'email',
@@ -52,7 +52,7 @@ const fields = [
         },
     },
     {
-        id: 1,
+        id: 4,
         type: 'phone',
         label: 'Contact*',
         name: 'contact',

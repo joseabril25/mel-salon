@@ -1,5 +1,5 @@
-import React from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import React, { useMemo } from 'react';
+import { useSelector } from 'react-redux';
 import Basic from '../components/basic';
 import BasicSecond from '../components/basic-second';
 import MainContainer from '../components/container';
@@ -14,7 +14,7 @@ import PreferencesThird from '../components/preferences-third';
 const Registration = () => {
     const registerPage = useSelector(({ register }) => register.registerPage);
 
-    const Content = () => {
+    const Content = useMemo(() => {
         switch (registerPage) {
             case 1: 
                 return <Basic />
@@ -35,7 +35,7 @@ const Registration = () => {
             default:
                 break;
         }
-    }
+    }, [])
 
     return(
         <MainContainer>
@@ -70,7 +70,7 @@ const Registration = () => {
                         <div className="container-fluid">
                             <div className="row align-items-center">
                                 <div className="col-lg-12 col-md-12">
-                                    <Content />
+                                    {Content}
                                 </div>
                             </div>
                         </div>

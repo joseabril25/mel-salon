@@ -6,10 +6,13 @@ import fields, { defaultValues } from './preferences-third-form.fields'
 
 const PreferencesThird = () => {
     const dispatch = useDispatch();
-    const { register, handleSubmit, errors, reset } = useForm();
+    const { register, handleSubmit, errors, reset } = useForm({
+      mode: 'onSubmit',
+      defaultValues
+    });
 
     const onSubmit = () => {
-        dispatch(toggleApplyPages(7))
+        dispatch(toggleApplyPages({page:7}))
     }
 
     const renderFields = fields.map((field) => (

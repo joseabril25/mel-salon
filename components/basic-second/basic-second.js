@@ -6,8 +6,10 @@ import fields, { doubleFields, tripleFields, defaultValues } from './basic-secon
 
 const BasicSecond = () => {
   const dispatch = useDispatch()
-  const { register, handleSubmit, errors, reset } = useForm();
-  console.log("🚀 ~ file: basic-second.js ~ line 45 ~ {doubleFields.map ~ doubleFields", doubleFields)
+  const { register, handleSubmit, errors, reset } = useForm({
+    mode: 'onSubmit',
+    defaultValues
+  });
 
   const onSubmit = () => {
     dispatch(toggleApplyPages(3))

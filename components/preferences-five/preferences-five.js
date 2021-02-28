@@ -6,9 +6,12 @@ import fields, { defaultValues } from './preferences-five.fields'
 
 const PreferencesFive = () => {
     const dispatch = useDispatch();
-    const { register, handleSubmit, errors, reset } = useForm();
+    const { register, handleSubmit, errors, reset } = useForm({
+      mode: 'onSubmit',
+      defaultValues
+    });
 
-    const onSubmit = () => {
+    const onSubmit = (data) => {
         dispatch(toggleApplyPages(9))
     }
 

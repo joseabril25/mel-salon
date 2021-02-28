@@ -25,13 +25,13 @@ function* authLogin({payload}) {
       ])
       yield Cookies.set('yehey-jwt', jwt, { expires: 2 });
       yield Cookies.set('yehey-user', user, { expires: 2 });
+      yield document.location.href = '/'
     }
   } catch (error) {
     yield put({ type: authTypes.AUT_LOGIN_ERROR, payload: 'Invalid login credentials'})
     
   } finally {
     yield put({ type: authTypes.AUT_LOGIN_LOADING, payload: false})
-    document.location.href = '/'
   }
 }
 

@@ -8,8 +8,8 @@ const Basic = () => {
     const dispatch = useDispatch();
     const { register, handleSubmit, errors, reset } = useForm();
 
-    const onSubmit = () => {
-        dispatch(toggleApplyPages(2))
+    const onSubmit = (data) => {
+      dispatch(toggleApplyPages({data, page: 2}))
     }
 
     const renderFields = fields.map((field) => (
