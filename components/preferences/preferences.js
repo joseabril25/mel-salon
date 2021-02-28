@@ -11,8 +11,10 @@ const Preferences = () => {
       defaultValues
     });
 
-    const onSubmit = () => {
-      dispatch(toggleApplyPages(5))
+    const onSubmit = (data) => {
+    console.log("🚀 ~putangina mo data", data)
+
+      dispatch(toggleApplyPages({type: 'pref', data, page: 5}))
     }
 
     const renderFields = fields.map((field) => (
@@ -30,7 +32,7 @@ const Preferences = () => {
                     type={field.type}
                     placeholder={field.placeholder}
                   />
-                  <span class="checkmark"></span>
+                  <span className="checkmark"></span>
                 </label>
               </div>
             )}
@@ -44,19 +46,19 @@ const Preferences = () => {
     
     return (
         <div className='register-container'>
-          <form className='registration-form-preferences' onSubmit={handleSubmit(onSubmit)}>
-            <div className="row">
+          <form className='' onSubmit={handleSubmit(onSubmit)}>
+            <div className="row registration-form-preferences">
                 {renderFields}
             </div>
-          </form>
-          <div className="row">
-            <div className="col-lg-12 col-md-6 text-center">
-                <button type="submit" className="preference-buttons">
-                    {/* {isLoading && <div className={styles.spinner} />} */}
-                    Next
-                </button>
+            <div className="row">
+              <div className="col-lg-12 col-md-6 text-center">
+                  <button type="submit" className="preference-buttons">
+                      {/* {isLoading && <div className={styles.spinner} />} */}
+                      Next
+                  </button>
+              </div>
             </div>
-          </div>
+          </form>
         </div>
   );
 }

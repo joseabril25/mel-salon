@@ -10,11 +10,9 @@ const PreferencesSecond = () => {
       mode: 'onSubmit',
       defaultValues
     });
-    console.log("🚀 ~ file: preferences-second.js ~ line 10 ~ PreferencesSecond ~ errors", errors)
 
     const onSubmit = (data) => {
-    console.log("🚀 ~ file: preferences-second.js ~ line 16 ~ onSubmit ~ data", data)
-        dispatch(toggleApplyPages(6))
+        dispatch(toggleApplyPages({type: 'pref-second', data, page: 6}))
     }
 
     const renderFields = fields.map((field) => (
@@ -60,19 +58,19 @@ const PreferencesSecond = () => {
     
     return (
       <div className='register-container'>
-        <form className='registration-form-preferences' onSubmit={handleSubmit(onSubmit)}>
-          <div className="row">
+        <form className='' onSubmit={handleSubmit(onSubmit)}>
+          <div className="row registration-form-preferences">
               {renderFields}
           </div>
-        </form>
-        <div className="row">
-          <div className="col-lg-12 col-md-12 text-center">
-              <button type="submit" className="preference-buttons">
-                  {/* {isLoading && <div className={styles.spinner} />} */}
-                  Next
-              </button>
+          <div className="row">
+            <div className="col-lg-12 col-md-12 text-center">
+                <button type="submit" className="preference-buttons">
+                    {/* {isLoading && <div className={styles.spinner} />} */}
+                    Next
+                </button>
+            </div>
           </div>
-        </div>
+        </form>
       </div>
   );
 }

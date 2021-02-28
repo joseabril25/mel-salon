@@ -5,9 +5,10 @@ import Link from 'next/link'
 import fields, { defaultValues } from './sign-in.fields'
 import { authLogin } from '../../store/actions/auth.actions';
 
-const SignIn = ({ isLoading }) => {
+const SignIn = () => {
     const dispatch = useDispatch();
     const loginError = useSelector(({ auth }) => auth.loginError);
+    const isLoading = useSelector(({ auth }) => auth.isLoginLoading);
     const { register, handleSubmit, errors, reset } = useForm({
         mode: 'onSubmit',
         defaultValues: defaultValues
@@ -45,7 +46,7 @@ const SignIn = ({ isLoading }) => {
                 <div className="row">
                     <div className="col-lg-12 col-md-6">
                         <button type="submit">
-                            {/* {isLoading && <div className={styles.spinner} />} */}
+                            {/* {<div className={styles.spinner} />} */}
                             Login
                         </button>
                     </div>
@@ -59,7 +60,6 @@ const SignIn = ({ isLoading }) => {
             <div className="row">
                 <div className="col-lg-12 col-md-6">
                     <button type="submit" className='fb-login' >
-                        {/* {isLoading && <div className={styles.spinner} />} */}
                         Login with Facebook
                     </button>
                 </div>

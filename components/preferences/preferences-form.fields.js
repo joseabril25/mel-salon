@@ -8,7 +8,7 @@ const fields = [
     options: ['0', '1', '2', '3', '4', '5 or more'],
     validation: {
       required: {
-        value: true,
+        value: false,
         message: 'This field is required',
       },
     },
@@ -22,7 +22,7 @@ const fields = [
     options: ['0', '1', '2', '3', '4', '5 or more'],
     validation: {
       required: {
-        value: true,
+        value: false,
         message: 'This field is required',
       },
     },

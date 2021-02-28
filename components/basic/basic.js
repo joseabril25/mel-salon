@@ -9,7 +9,7 @@ const Basic = () => {
     const { register, handleSubmit, errors, reset } = useForm();
 
     const onSubmit = (data) => {
-      dispatch(toggleApplyPages({data, page: 2}))
+      dispatch(toggleApplyPages({type: 'basic', data, page: 2}))
     }
 
     const renderFields = fields.map((field) => (

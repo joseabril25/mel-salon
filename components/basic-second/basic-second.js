@@ -11,8 +11,8 @@ const BasicSecond = () => {
     defaultValues
   });
 
-  const onSubmit = () => {
-    dispatch(toggleApplyPages(3))
+  const onSubmit = (data) => {
+    dispatch(toggleApplyPages({type: 'basic-second', data, page: 3}))
   }
 
   const renderFields = fields.map((field) => (

@@ -1,4 +1,4 @@
-import React, { useMemo } from 'react';
+import React, { useMemo, useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import Basic from '../components/basic';
 import BasicSecond from '../components/basic-second';
@@ -35,7 +35,7 @@ const Registration = () => {
             default:
                 break;
         }
-    }, [])
+    }, [registerPage])
 
     return(
         <MainContainer>

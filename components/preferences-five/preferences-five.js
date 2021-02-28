@@ -1,18 +1,20 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { toggleApplyPages } from '../../store/actions/register.actions';
 import fields, { defaultValues } from './preferences-five.fields'
 
 const PreferencesFive = () => {
     const dispatch = useDispatch();
+    const isLoading = useSelector(({ register }) => register.isRegisterLoading);
+    const isError = useSelector(({ register }) => register.regError);
     const { register, handleSubmit, errors, reset } = useForm({
       mode: 'onSubmit',
       defaultValues
     });
 
     const onSubmit = (data) => {
-        dispatch(toggleApplyPages(9))
+        dispatch(toggleApplyPages({type: 'pref-five', data, page: 9}))
     }
 
     const renderFields = fields.map((field) => (
@@ -36,13 +38,16 @@ const PreferencesFive = () => {
                       type={field.type}
                       placeholder={field.placeholder}
                     />
-                    <span class="checkmark"></span>
+                    <span className="checkmark"></span>
                   </label>
                 </div>
               )}
             </div>
-            {errors[field.name] && (
+            {errors[field.name]&& (
               <span className='contact-form_group-error'>{errors[field.name].message}</span>
+            )}
+            {isError && (
+              <span className='contact-form_group-error'>{isError}</span>
             )}
           </div>
         </div>
@@ -51,19 +56,19 @@ const PreferencesFive = () => {
     
     return (
         <div className='register-container'>
-          <form className='registration-form-preferences-fourth' onSubmit={handleSubmit(onSubmit)}>
-            <div className="row">
+          <form onSubmit={handleSubmit(onSubmit)}>
+            <div className="row registration-form-preferences-fourth">
                 {renderFields}
             </div>
-          </form>
-          <div className="row">
-            <div className="col-lg-12 col-md-12 text-center">
-                <button type="submit" className="preference-buttons">
-                    {/* {isLoading && <div className={styles.spinner} />} */}
-                    Next
-                </button>
+            <div className="row">
+              <div className="col-lg-12 col-md-12 text-center">
+                  <button type="submit" className="preference-buttons">
+                    {isLoading && <div className={styles.spinner} />}
+                    Submit
+                  </button>
+              </div>
             </div>
-          </div>
+          </form>
         </div>
   );
 }

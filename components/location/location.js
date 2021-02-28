@@ -11,8 +11,8 @@ const Location = () => {
     defaultValues
   });
 
-  const onSubmit = () => {
-    dispatch(toggleApplyPages(4))
+  const onSubmit = (data) => {
+    dispatch(toggleApplyPages({type: 'location', data, page: 4}))
   }
 
   const renderFields = fields.map((field) => (

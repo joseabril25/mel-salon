@@ -6,3 +6,10 @@ export const toggleApplyPages = (payload) => {
       payload,
     };
 };
+
+export const handleSubmit = () => {
+    return {
+      type: registerTypes.RGS_HANDLE_SUBMIT,
+      payload,
+    };
+};
