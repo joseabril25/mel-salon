@@ -725,6 +725,9 @@ Navbar CSS
 
 .header-head {
     height: 100vh;
+    background: url('../images/hero/hero-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 /*================================================
 Main Banner CSS
@@ -6600,6 +6603,9 @@ ML Main Banner CSS
     }
 }
 .ml-banner-content {
+    background-color: $white-color;
+    border-radius: 25px;
+    padding: 30px 20px;
     h1 {
         margin-bottom: 15px;
         line-height: 1.1;
@@ -6616,7 +6622,6 @@ ML Main Banner CSS
     .btn {
         margin-top: 5px;
     }
-    padding: 0px 5% 0px 0px;
 }
 .ml-banner-single-image {
     text-align: left;
@@ -6638,6 +6643,7 @@ ML Main Banner CSS
         repeat: no-repeat;
     };
     .ml-banner-content {
+        background-color: $white-color;
         h1 {
             font-size: 37px;
         }

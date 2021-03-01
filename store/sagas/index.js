@@ -5,6 +5,7 @@ import { appWatcher } from './app.saga';
 import { applyWatcher } from './apply.saga';
 import { registerWatcher } from './register.saga';
 import { authWatcher } from './auth.saga';
+import { appointmentWatcher } from './appointment.saga';
 
 // Redux Saga: Root Saga
 export function* rootSaga() {
@@ -12,6 +13,7 @@ export function* rootSaga() {
     fork(appWatcher),
     fork(applyWatcher),
     fork(registerWatcher),
-    fork(authWatcher)
+    fork(authWatcher),
+    fork(appointmentWatcher),
   ]);
 }

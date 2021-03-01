@@ -3,9 +3,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import * as Icon from 'react-feather'
 import { toggleModal } from '../../store/actions/app.actions';
 import SignIn from '../sign-in';
-import ContactUs from '../contact-us';
-import PlayFail from '../play-fail';
-import PlaySuccess from '../play-success';
+import SignUp from '../sign-up';
+import SetAppointment from '../set-appointment';
 
 const ModalComp = ({ }) => {
   const dispatch = useDispatch();
@@ -17,12 +16,10 @@ const ModalComp = ({ }) => {
       switch (modalType) {
         case 'login':
           return <SignIn />
-        case 'contact':
-          return <ContactUs />
-        case 'play-fail':
-          return <PlayFail />
-        case 'play-success':
-          return <PlaySuccess />
+        case 'sign-up':
+          return <SignUp />
+        case 'appointment':
+          return <SetAppointment />
         default:
           break;
       }
@@ -34,12 +31,10 @@ const ModalComp = ({ }) => {
       switch (modalType) {
         case 'login':
           return 'modal-body'
-        case 'contact':
+        case 'sign-up':
           return 'modal-body'
-        case 'play-fail':
+        case 'appointment':
           return 'modal-body'
-        case 'play-success':
-          return 'modal-body-orange'
         default:
           return 'modal-body';
       }

@@ -20,7 +20,7 @@ const MainContainer = ({ children }) => {
                 {/* Menu */}
                 <Header />
                 {children}
-                <Footer />
+                {/* <Footer /> */}
                 {isModalOpen ? <ModalComp /> : <></>}
                 <GoTop scrollStepInPx="50" delayInMs="16.66" />
             </Preloader>

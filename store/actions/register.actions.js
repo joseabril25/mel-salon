@@ -7,9 +7,16 @@ export const toggleApplyPages = (payload) => {
     };
 };
 
-export const handleSubmit = () => {
+export const handleRegister = (payload) => {
     return {
       type: registerTypes.RGS_HANDLE_SUBMIT,
+      payload,
+    };
+};
+
+export const handleAppointment = (payload) => {
+    return {
+      type: registerTypes.RGS_HANDLE_APPOINTMENT,
       payload,
     };
 };

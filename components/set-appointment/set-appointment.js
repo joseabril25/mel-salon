@@ -1,21 +1,20 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
-import { connect, useDispatch, useSelector } from 'react-redux';
-import Link from 'next/link'
-import fields, { defaultValues } from './sign-in.fields'
-import { authLogin } from '../../store/actions/auth.actions';
+import { useDispatch, useSelector } from 'react-redux';
+import fields, { defaultValues } from './set-appointment.fields'
+import { handleSetAppointment } from '../../store/actions/appointment.actions';
 
-const SignIn = () => {
+const SetAppointment = () => {
     const dispatch = useDispatch();
     const loginError = useSelector(({ auth }) => auth.loginError);
     const isLoading = useSelector(({ auth }) => auth.isLoginLoading);
-    const { register, handleSubmit, errors, reset } = useForm({
+    const { register, handleSubmit, errors } = useForm({
         mode: 'onSubmit',
         defaultValues: defaultValues
     });
 
     const onSubmit = (data) => {
-        dispatch(authLogin(data));
+        dispatch(handleSetAppointment(data));
     }
 
     const renderFields = fields.map((field) => (
@@ -46,28 +45,13 @@ const SignIn = () => {
                     <div className="col-lg-12 col-md-6">
                         <button type="submit">
                             {/* {<div className={styles.spinner} />} */}
-                            Login
+                            Set Appointment
                         </button>
                     </div>
                 </div>
             </form>
-            <div className="row divider-row">
-                <div className="col-lg-12 col-md-6">
-                    <h5 className='divider'>or</h5>
-                </div>
-            </div>
-            <div className="row divider-row">
-                <div className="col-lg-12 col-md-6">
-                    <h5 className='divider'>Don't have an account yet? 
-                        <Link href="/registration">
-                                <a > Sign Up For Free</a>
-                        </Link>
-                    </h5>
-                    
-                </div>
-            </div>
         </div>
   );
 }
 
-export default SignIn;
+export default SetAppointment;

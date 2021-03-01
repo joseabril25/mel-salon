@@ -56,17 +56,11 @@ console.log("🚀 ~ file: Header.js ~ line 10 ~ Header ~ user", user)
                         <div className={classOne} id="navbarSupportedContent">
                             <ul className="navbar-nav nav ml-auto">
                                 {
-                                    menu.map(m => 
-                                        <li className="nav-item">
-                                            <Link activeClassName="active" href={`/${m.link}`}>
-                                                <a className="nav-link">{m.title}</a>
-                                            </Link>
-                                        </li>
-                                    )
-                                }
-                                {
                                     isLoggedIn ? 
                                     <>
+                                        <li className="nav-item">
+                                            <a className="nav-link" onClick={ () => dispatch(toggleModal({active: true, type: 'appointment'}))}>Set Appointment</a>
+                                        </li>
                                         <li className="nav-item">
                                             <a className="nav-link">Hello, {user.username}</a>
                                         </li>
@@ -80,9 +74,7 @@ console.log("🚀 ~ file: Header.js ~ line 10 ~ Header ~ user", user)
                                             <a className="nav-link" onClick={ () => dispatch(toggleModal({active: true, type: 'login'}))}>Login</a>
                                         </li>
                                         <li className="nav-item">
-                                            <Link activeClassName="active" href='/registration'>
-                                                <a className="nav-link">Join Yehey!</a>
-                                            </Link>
+                                            <a className="nav-link" onClick={ () => dispatch(toggleModal({active: true, type: 'sign-up'}))}>Sign Up</a>
                                         </li>
                                     </>
                                 }
